@@ -1,46 +1,31 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-4 text-center">
-      {/* Wood background — matches the fixed texture, local to hero */}
-      <Image
-        src="/images/wood-bg.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover opacity-75"
-      />
-
-      {/* Subtle dark vignette for depth and text readability */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/10"
-      />
-      {/* Warm cream fade at bottom to blend into page content */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream/60"
-      />
-
-      {/* Content */}
+    <section className="relative flex min-h-[60vh] flex-col items-center justify-center px-4 pt-8 text-center">
+      {/* Content card — frosted glass panel on the wood */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10"
+        className="relative z-10 rounded-2xl bg-soft-white/80 px-10 py-14 shadow-lg shadow-charcoal/8 backdrop-blur-sm sm:px-16 sm:py-16"
       >
         <h1 className="logo-3d font-heading text-5xl font-bold tracking-tight text-charcoal sm:text-6xl md:text-7xl">
           Haven &amp; Home
         </h1>
 
-        <p className="mt-4 font-accent text-xl italic text-charcoal/70 sm:text-2xl">
+        <p className="mt-4 font-accent text-xl italic text-medium-gray sm:text-2xl">
           Spaces worth coming home to.
+        </p>
+
+        <div className="mt-3 mx-auto h-px w-24 bg-terracotta/40" />
+
+        <p className="mx-auto mt-5 max-w-md font-body text-sm leading-relaxed text-medium-gray sm:text-base">
+          Curated home decor ideas, organization tips, and honest product
+          recommendations to help you create a home you love.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -64,7 +49,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-8 z-10 flex flex-col items-center gap-1"
+        className="absolute bottom-6 z-10 flex flex-col items-center gap-1"
       >
         <span className="font-body text-xs uppercase tracking-widest text-charcoal/40">
           Scroll
