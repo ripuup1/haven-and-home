@@ -86,7 +86,7 @@ export default function Header() {
           {/* Center logo */}
           <Link href="/" className="group flex items-center md:mx-12">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-transparent.png"
               alt="Haven & Home"
               width={48}
               height={48}
