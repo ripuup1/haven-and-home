@@ -1,14 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden bg-cream px-4 text-center">
-      {/* Warm gradient overlay */}
+    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-4 text-center">
+      {/* Background lifestyle image */}
+      <Image
+        src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1920&q=80"
+        alt="Warm, styled living room with natural light"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+
+      {/* Warm overlay for text readability */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-terracotta/5 via-transparent to-warm-gold/10"
+        className="pointer-events-none absolute inset-0 bg-cream/70 backdrop-blur-[2px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-cream/40 via-transparent to-cream/80"
       />
 
       {/* Content */}
@@ -18,13 +33,28 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10"
       >
-        <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-charcoal">
+        <h1 className="font-heading text-5xl font-bold tracking-tight text-charcoal sm:text-6xl md:text-7xl">
           Haven &amp; Home
         </h1>
 
-        <p className="mt-4 font-accent text-xl sm:text-2xl italic text-medium-gray">
+        <p className="mt-4 font-accent text-xl italic text-charcoal/70 sm:text-2xl">
           Spaces worth coming home to.
         </p>
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <a
+            href="/blog"
+            className="rounded-lg bg-terracotta px-8 py-3 font-body text-sm font-bold text-white transition-colors hover:bg-terracotta-dark"
+          >
+            Read the Blog
+          </a>
+          <a
+            href="/favorites"
+            className="rounded-lg border-2 border-charcoal/20 px-8 py-3 font-body text-sm font-bold text-charcoal transition-colors hover:border-terracotta hover:text-terracotta"
+          >
+            Shop Our Picks
+          </a>
+        </div>
       </motion.div>
 
       {/* Scroll indicator */}
@@ -34,7 +64,7 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute bottom-8 z-10 flex flex-col items-center gap-1"
       >
-        <span className="font-body text-xs uppercase tracking-widest text-medium-gray/60">
+        <span className="font-body text-xs uppercase tracking-widest text-charcoal/40">
           Scroll
         </span>
         <motion.svg
@@ -48,7 +78,7 @@ export default function Hero() {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-medium-gray/50"
+          className="text-charcoal/30"
         >
           <polyline points="4 7 10 13 16 7" />
         </motion.svg>

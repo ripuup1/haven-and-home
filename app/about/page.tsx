@@ -7,25 +7,21 @@ export const metadata = {
 
 const offerings = [
   {
-    icon: "📋",
     title: "Product Reviews",
     description:
       "Honest, detailed reviews of home products we've actually used. No fluff, no filler — just the truth about what's worth your money.",
   },
   {
-    icon: "✨",
     title: "Organization Tips",
     description:
       "Practical systems and storage solutions that actually stick. We focus on methods that work for real life, not just Instagram photos.",
   },
   {
-    icon: "🏠",
     title: "Room Makeovers",
     description:
       "Step-by-step transformations that prove you don't need a huge budget to make a big impact. Real rooms, real budgets, real results.",
   },
   {
-    icon: "💰",
     title: "Budget-Friendly Finds",
     description:
       "The best home products at every price point. We scour Amazon so you don't have to, finding pieces that look high-end without the price tag.",
@@ -103,10 +99,7 @@ export default function AboutPage() {
             {offerings.map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 0.1}>
                 <article className="flex flex-col rounded-xl border border-clay/15 bg-soft-white p-6 sm:p-8 transition-shadow duration-300 hover:shadow-md">
-                  <span className="text-3xl" role="img" aria-label={item.title}>
-                    {item.icon}
-                  </span>
-                  <h3 className="mt-4 font-heading text-xl font-bold text-charcoal">
+                  <h3 className="font-heading text-xl font-bold text-charcoal">
                     {item.title}
                   </h3>
                   <p className="mt-2 font-body text-sm leading-relaxed text-medium-gray sm:text-base">

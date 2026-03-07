@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 
 interface ProductCardProps {
@@ -49,17 +50,43 @@ export default function ProductCard({
   imageUrl,
   affiliateUrl,
 }: ProductCardProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div className="group flex flex-col sm:flex-row rounded-xl border border-[#e5ddd0] bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-charcoal/8">
       {/* Product Image */}
       <div className="relative w-full sm:w-48 md:w-56 shrink-0 aspect-square sm:aspect-auto sm:min-h-full overflow-hidden bg-cream">
-        <Image
-          src={imageUrl}
-          alt={name}
-          fill
-          sizes="(max-width: 639px) 100vw, 224px"
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-        />
+        {imageError ? (
+          <div className="flex h-full w-full items-center justify-center bg-cream">
+            <div className="flex flex-col items-center gap-2 text-clay/60">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M21 15l-5-5L5 21" />
+              </svg>
+              <span className="font-body text-xs">Image unavailable</span>
+            </div>
+          </div>
+        ) : (
+          <Image
+            src={imageUrl}
+            alt={name}
+            fill
+            sizes="(max-width: 639px) 100vw, 224px"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            onError={() => setImageError(true)}
+          />
+        )}
       </div>
 
       {/* Product Content */}

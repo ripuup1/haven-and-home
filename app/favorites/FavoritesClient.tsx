@@ -35,7 +35,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,240",
     description:
       "Expandable bamboo dividers that fit any drawer size. Perfect for utensils, gadgets, and junk drawer chaos. We use these in every kitchen we organize.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE01?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -46,7 +46,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "1,870",
     description:
       "Heavy, sturdy, and genuinely beautiful on the counter. The matte finish resists fingerprints and comes in six neutral colorways.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1556909172-89cf0b8fdd5d?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE02?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -57,7 +57,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "5,120",
     description:
       "12-piece borosilicate glass set with bamboo lids. Microwave and dishwasher safe. Makes your pantry look like a magazine spread.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE03?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -69,7 +69,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,430",
     description:
       "Solid teak wood with a waterproof finish. Turns any shower into a spa experience. Holds up beautifully even after months of daily use.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE04?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -80,7 +80,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "1,560",
     description:
       "Soap dispenser, toothbrush holder, tumbler, and soap dish in a sleek matte black finish. Instant bathroom upgrade for under $35.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE05?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -91,7 +91,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "8,910",
     description:
       "Hotel-quality Turkish cotton at a fraction of the price. Gets softer with every wash. The oatmeal color is our absolute favorite.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE06?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -103,7 +103,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "4,320",
     description:
       "Stonewashed French linen that's impossibly soft from day one. The relaxed, lived-in look is effortlessly chic. Includes two pillow shams.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1522771739-9e2d5e7a0c9e?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE07?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -114,7 +114,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,150",
     description:
       "Minimalist wall-mounted shelves that replace bulky nightstands. Perfect for small bedrooms. Each shelf holds up to 15 lbs.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE08?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -125,7 +125,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "12,430",
     description:
       "100% blackout with a linen-look texture. Block light without sacrificing style. The ivory color looks incredible in any bedroom.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1522771739-9e2d5e7a0c9e?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE09?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -137,7 +137,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "6,780",
     description:
       "The cozy factor is off the charts. Handwoven chenille that drapes beautifully over a sofa or chair. A best-seller for a reason.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE10?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -148,7 +148,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,670",
     description:
       "Natural seagrass with cotton rope handles. Three nesting sizes for flexible storage. Gorgeous as plant holders or blanket baskets.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1555041469-a586c1ea9b63?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE11?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -159,7 +159,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,890",
     description:
       "Brushed gold frame with a subtle Art Deco feel. Makes any room look bigger and brighter. The quality rivals mirrors three times the price.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE12?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -171,7 +171,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "4,510",
     description:
       "Bamboo monitor riser with two drawers and side compartments. Elevates your screen to the perfect ergonomic height while decluttering your desk.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE13?tag=havenandhomec-20",
     category: "Office",
   },
@@ -182,7 +182,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,340",
     description:
       "Five-compartment wooden organizer that keeps pens, notepads, and supplies tidy. The walnut finish adds warmth to any workspace.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE14?tag=havenandhomec-20",
     category: "Office",
   },
@@ -193,7 +193,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "7,890",
     description:
       "Memory foam lumbar pillow with a breathable mesh cover. A game-changer for long work days. Fits any office chair or car seat.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE15?tag=havenandhomec-20",
     category: "Office",
   },
@@ -205,7 +205,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "5,670",
     description:
       "60 stems of natural and white pampas grass. Lasts forever, no watering needed. The easiest way to add texture and warmth to any room.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE16?tag=havenandhomec-20",
     category: "Decor",
   },
@@ -216,7 +216,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,450",
     description:
       "Hand-poured soy candles in amber glass jars. Scents include vanilla bean, cedarwood, and lavender sage. Clean burn with incredible throw.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE17?tag=havenandhomec-20",
     category: "Decor",
   },
@@ -227,7 +227,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "4,120",
     description:
       "Pre-washed linen blend in coordinating neutral tones. Hidden zipper closure. The fastest way to refresh your sofa or bed for under $30.",
-    imageUrl: "/images/products/placeholder.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE18?tag=havenandhomec-20",
     category: "Decor",
   },

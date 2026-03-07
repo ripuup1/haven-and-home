@@ -8,11 +8,11 @@ const exploreLinks = [
 ];
 
 const categoryLinks = [
-  { href: "/blog/category/kitchen", label: "Kitchen" },
-  { href: "/blog/category/bathroom", label: "Bathroom" },
-  { href: "/blog/category/bedroom", label: "Bedroom" },
-  { href: "/blog/category/living-room", label: "Living Room" },
-  { href: "/blog/category/organization", label: "Organization" },
+  { href: "/blog", label: "Kitchen" },
+  { href: "/blog", label: "Bathroom" },
+  { href: "/blog", label: "Bedroom" },
+  { href: "/blog", label: "Living Room" },
+  { href: "/blog", label: "Organization" },
 ];
 
 export default function Footer() {

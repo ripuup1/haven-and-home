@@ -56,8 +56,10 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${lato.variable} ${cormorant.variable} antialiased`}
       >
+        {/* Fixed texture background for floating content effect */}
+        <div className="texture-bg" aria-hidden="true" />
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main className="relative min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

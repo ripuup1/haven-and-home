@@ -15,32 +15,38 @@ const shopPicks = [
   {
     name: "Ceramic Utensil Holder",
     price: "$24.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE01?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1556909172-89cf0b8fdd5d?w=400&q=80",
+    url: "https://www.amazon.com/s?k=ceramic+utensil+holder+crock&tag=havenandhomec-20",
   },
   {
     name: "Woven Storage Baskets (Set of 3)",
     price: "$34.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE02?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1555041469-a586c1ea9b63?w=400&q=80",
+    url: "https://www.amazon.com/s?k=woven+storage+baskets+set+of+3&tag=havenandhomec-20",
   },
   {
     name: "Linen Throw Pillow Covers",
     price: "$18.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE03?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
+    url: "https://www.amazon.com/s?k=linen+throw+pillow+covers+18x18&tag=havenandhomec-20",
   },
   {
     name: "Bamboo Drawer Organizer Set",
     price: "$29.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE04?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+    url: "https://www.amazon.com/s?k=bamboo+drawer+organizer+set&tag=havenandhomec-20",
   },
   {
-    name: "Gold Wall Mirror (24\")",
+    name: "Gold Round Wall Mirror",
     price: "$45.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE05?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80",
+    url: "https://www.amazon.com/s?k=gold+round+wall+mirror+24+inch&tag=havenandhomec-20",
   },
   {
-    name: "Aromatherapy Candle Set",
+    name: "Soy Candle Set",
     price: "$22.99",
-    url: "https://www.amazon.com/dp/B0EXAMPLE06?tag=havenandhomec-20",
+    image: "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80",
+    url: "https://www.amazon.com/s?k=soy+candle+set+aromatherapy&tag=havenandhomec-20",
   },
 ];
 
@@ -55,13 +61,13 @@ export default function HomePage() {
       <Hero />
 
       {/* Editor's Picks */}
-      <section className="bg-soft-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-2xl bg-soft-white/90 p-8 shadow-sm backdrop-blur-sm sm:p-12">
           <ScrollReveal>
-            <h2 className="font-heading text-3xl font-bold text-charcoal sm:text-4xl text-center">
+            <h2 className="text-center font-heading text-3xl font-bold text-charcoal sm:text-4xl">
               Editor&apos;s Picks
             </h2>
-            <p className="mt-3 text-center font-body text-medium-gray text-lg">
+            <p className="mt-3 text-center font-body text-lg text-medium-gray">
               Handpicked reads we think you&apos;ll love.
             </p>
           </ScrollReveal>
@@ -73,22 +79,18 @@ export default function HomePage() {
                   href={`/blog/${post.frontmatter.slug}`}
                   className="group block overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  {/* Featured Image */}
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
-                      src={post.frontmatter.featuredImage || "/images/blog/placeholder.jpg"}
+                      src={post.frontmatter.featuredImage}
                       alt={post.frontmatter.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    {/* Category Badge */}
                     <span className="absolute left-4 top-4 rounded-full bg-olive px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-white">
                       {post.frontmatter.category}
                     </span>
                   </div>
-
-                  {/* Content */}
                   <div className="p-6">
                     <h3 className="font-heading text-xl font-bold leading-snug text-charcoal transition-colors group-hover:text-terracotta sm:text-2xl">
                       {post.frontmatter.title}
@@ -113,13 +115,13 @@ export default function HomePage() {
 
       {/* Latest From the Blog */}
       {latestPosts.length > 0 && (
-        <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="mx-auto max-w-7xl">
+        <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mx-auto max-w-7xl rounded-2xl bg-cream/80 p-8 shadow-sm backdrop-blur-sm sm:p-12">
             <ScrollReveal>
-              <h2 className="font-heading text-3xl font-bold text-charcoal sm:text-4xl text-center">
+              <h2 className="text-center font-heading text-3xl font-bold text-charcoal sm:text-4xl">
                 Latest From the Blog
               </h2>
-              <p className="mt-3 text-center font-body text-medium-gray text-lg">
+              <p className="mt-3 text-center font-body text-lg text-medium-gray">
                 Fresh ideas for every room in your home.
               </p>
             </ScrollReveal>
@@ -132,7 +134,7 @@ export default function HomePage() {
                     slug={post.frontmatter.slug}
                     excerpt={post.frontmatter.excerpt}
                     category={post.frontmatter.category}
-                    featuredImage={post.frontmatter.featuredImage || "/images/blog/placeholder.jpg"}
+                    featuredImage={post.frontmatter.featuredImage}
                     readTime={post.readTime.text}
                     date={formatDate(post.frontmatter.date)}
                   />
@@ -169,20 +171,20 @@ export default function HomePage() {
       )}
 
       {/* Shop Our Picks */}
-      <section className="bg-soft-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-2xl bg-soft-white/90 p-8 shadow-sm backdrop-blur-sm sm:p-12">
           <ScrollReveal>
-            <h2 className="font-heading text-3xl font-bold text-charcoal sm:text-4xl text-center">
+            <h2 className="text-center font-heading text-3xl font-bold text-charcoal sm:text-4xl">
               Shop Our Picks
             </h2>
-            <p className="mt-3 text-center font-body text-medium-gray text-lg">
+            <p className="mt-3 text-center font-body text-lg text-medium-gray">
               Curated favorites we use and love — all available on Amazon.
             </p>
           </ScrollReveal>
 
           <ScrollReveal>
             <div className="relative mt-10">
-              <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+              <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
                 {shopPicks.map((product) => (
                   <a
                     key={product.name}
@@ -191,27 +193,15 @@ export default function HomePage() {
                     rel="noopener noreferrer nofollow"
                     className="group flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-clay/15 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
-                    {/* Product Image Placeholder */}
                     <div className="relative aspect-square w-full overflow-hidden bg-cream">
-                      <div className="flex h-full items-center justify-center">
-                        <svg
-                          width="48"
-                          height="48"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1"
-                          className="text-clay/30"
-                          aria-hidden="true"
-                        >
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="8.5" cy="8.5" r="1.5" />
-                          <path d="m21 15-5-5L5 21" />
-                        </svg>
-                      </div>
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        sizes="256px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
-
-                    {/* Product Info */}
                     <div className="flex flex-1 flex-col justify-between p-4">
                       <div>
                         <h3 className="font-heading text-base font-bold leading-snug text-charcoal transition-colors group-hover:text-terracotta">
@@ -247,8 +237,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pinterest CTA */}
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <ScrollReveal>
+            <p className="font-accent text-lg italic text-medium-gray">
+              Find us on Pinterest for daily inspiration
+            </p>
+            <a
+              href="https://pinterest.com/havenandhomeco"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg bg-charcoal px-6 py-3 font-body text-sm font-bold text-white transition-colors hover:bg-charcoal/80"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+              </svg>
+              Follow @havenandhomeco
+            </a>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Email Capture */}
-      <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <ScrollReveal>
           <EmailCapture />
         </ScrollReveal>
