@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-cream border-b border-clay/20">
+    <header className="sticky top-0 z-50 bg-cream/70 backdrop-blur-md border-b border-clay/15">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Slide-out Drawer */}
       <div
-        className={`fixed top-0 right-0 z-40 h-full w-72 bg-cream shadow-xl transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-40 h-full w-72 bg-cream/85 backdrop-blur-lg shadow-xl transition-transform duration-300 ease-in-out md:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

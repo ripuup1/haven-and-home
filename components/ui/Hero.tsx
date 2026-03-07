@@ -14,7 +14,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover opacity-75"
       />
 
       {/* Subtle dark vignette for depth and text readability */}
