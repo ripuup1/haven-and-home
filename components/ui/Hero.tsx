@@ -35,7 +35,7 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10"
       >
-        <h1 className="font-heading text-5xl font-bold tracking-tight text-charcoal sm:text-6xl md:text-7xl">
+        <h1 className="logo-3d font-heading text-5xl font-bold tracking-tight text-charcoal sm:text-6xl md:text-7xl">
           Haven &amp; Home
         </h1>
 

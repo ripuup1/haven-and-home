@@ -4,16 +4,32 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
+const leftLinks = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
+];
+
+const rightLinks = [
   { href: "/favorites", label: "Favorites" },
   { href: "/about", label: "About" },
 ];
 
+const allLinks = [...leftLinks, ...rightLinks];
+
 export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll position for transparent → opaque transition
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -37,29 +53,46 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
+  const linkClasses = (href: string) =>
+    `font-body text-sm font-medium tracking-wide uppercase transition-colors relative py-1 ${
+      isActive(href)
+        ? "text-terracotta"
+        : "text-charcoal hover:text-terracotta"
+    }`;
+
   return (
-    <header className="sticky top-0 z-50 bg-cream/70 backdrop-blur-md border-b border-clay/15">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-cream/80 backdrop-blur-md border-b border-clay/15 shadow-sm shadow-charcoal/5"
+          : "bg-transparent border-b border-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
-            <span className="font-heading text-2xl font-bold tracking-tight text-charcoal transition-colors group-hover:text-terracotta">
+        <div className="flex h-16 items-center justify-between md:justify-center">
+          {/* Desktop: Left nav links */}
+          <nav className="hidden md:flex items-center gap-8">
+            {leftLinks.map((link) => (
+              <Link key={link.href} href={link.href} className={linkClasses(link.href)}>
+                {link.label}
+                {isActive(link.href) && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terracotta rounded-full" />
+                )}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Center logo */}
+          <Link href="/" className="group flex items-center md:mx-12">
+            <span className="logo-3d font-heading text-2xl font-bold tracking-tight text-charcoal transition-colors group-hover:text-terracotta">
               Haven &amp; Home
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop: Right nav links */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-body text-sm font-medium tracking-wide uppercase transition-colors relative py-1 ${
-                  isActive(link.href)
-                    ? "text-terracotta"
-                    : "text-charcoal hover:text-terracotta"
-                }`}
-              >
+            {rightLinks.map((link) => (
+              <Link key={link.href} href={link.href} className={linkClasses(link.href)}>
                 {link.label}
                 {isActive(link.href) && (
                   <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-terracotta rounded-full" />
@@ -121,7 +154,7 @@ export default function Header() {
       >
         <div className="flex flex-col pt-20 px-6">
           <nav className="flex flex-col gap-2">
-            {navLinks.map((link) => (
+            {allLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
