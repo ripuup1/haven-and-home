@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -13,15 +14,14 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-10 rounded-2xl bg-soft-white/80 px-10 py-14 shadow-lg shadow-charcoal/8 backdrop-blur-sm sm:px-16 sm:py-16"
       >
-        <h1 className="logo-3d font-heading text-5xl font-bold tracking-tight text-charcoal sm:text-6xl md:text-7xl">
-          Haven &amp; Home
-        </h1>
-
-        <p className="mt-4 font-accent text-xl italic text-medium-gray sm:text-2xl">
-          Spaces worth coming home to.
-        </p>
-
-        <div className="mt-3 mx-auto h-px w-24 bg-terracotta/40" />
+        <Image
+          src="/images/logo.png"
+          alt="Haven & Home — Spaces Worth Coming Home To"
+          width={220}
+          height={220}
+          className="mx-auto"
+          priority
+        />
 
         <p className="mx-auto mt-5 max-w-md font-body text-sm leading-relaxed text-medium-gray sm:text-base">
           Curated home decor ideas, organization tips, and honest product

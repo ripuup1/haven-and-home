@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const leftLinks = [
@@ -84,9 +85,14 @@ export default function Header() {
 
           {/* Center logo */}
           <Link href="/" className="group flex items-center md:mx-12">
-            <span className="logo-3d font-heading text-2xl font-bold tracking-tight text-charcoal transition-colors group-hover:text-terracotta">
-              Haven &amp; Home
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Haven & Home"
+              width={48}
+              height={48}
+              className="transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop: Right nav links */}
