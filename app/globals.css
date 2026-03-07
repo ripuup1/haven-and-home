@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #F5EDE0;
+  --color-soft-white: #FAF8F5;
+  --color-charcoal: #3D3D3D;
+  --color-medium-gray: #666666;
+  --color-terracotta: #C67C5B;
+  --color-olive: #6B7F4E;
+  --color-clay: #B8866B;
+  --color-warm-gold: #C4A96A;
+  --color-sage: #9CAF88;
+  --color-terracotta-dark: #B06A4A;
+  --color-olive-dark: #5A6D3F;
+
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-lato);
+  --font-accent: var(--font-cormorant);
+}
+
+body {
+  background-color: var(--color-soft-white);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prose styles for MDX content */
+.prose {
+  max-width: 720px;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-charcoal);
+}
+
+.prose h1 {
+  font-family: var(--font-heading), serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-charcoal);
+}
+
+.prose h2 {
+  font-family: var(--font-heading), serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-charcoal);
+}
+
+.prose h3 {
+  font-family: var(--font-heading), serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-charcoal);
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.prose a {
+  color: var(--color-terracotta);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: var(--color-terracotta-dark);
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li {
+  list-style-type: disc;
+}
+
+.prose ol li {
+  list-style-type: decimal;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--color-charcoal);
+}
+
+.prose blockquote {
+  font-family: var(--font-accent), serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  border-left: 3px solid var(--color-terracotta);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: var(--color-medium-gray);
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #e5ddd0;
+  margin: 2rem 0;
+}
+
+/* Smooth scroll for TOC links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-soft-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-clay);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
