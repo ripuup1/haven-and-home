@@ -65,7 +65,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {categoryLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="font-body text-sm text-medium-gray transition-colors hover:text-terracotta"

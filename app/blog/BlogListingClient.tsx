@@ -53,7 +53,7 @@ export default function BlogListingClient({
         );
 
   return (
-    <div className="bg-soft-white">
+    <div>
       {/* Page Header */}
       <section className="bg-cream px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl text-center">
@@ -69,20 +69,18 @@ export default function BlogListingClient({
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="sticky top-0 z-20 border-b border-clay/10 bg-soft-white/95 backdrop-blur-sm px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <CategoryFilter
-            categories={CATEGORIES}
-            activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
-          />
-        </div>
-      </section>
-
-      {/* Main Content */}
+      {/* Floating Card Content */}
       <section className="px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl rounded-2xl bg-soft-white/90 shadow-sm backdrop-blur-sm p-4 sm:p-6 lg:p-8">
+          {/* Category Filter */}
+          <div className="border-b border-clay/10 pb-4 mb-8">
+            <CategoryFilter
+              categories={CATEGORIES}
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+            />
+          </div>
+
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
             {/* Posts Grid - Main Column */}
             <div className="flex-1 min-w-0">

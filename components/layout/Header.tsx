@@ -138,7 +138,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile drawer tagline */}
-          <div className="mt-auto pt-12 pb-8 border-t border-clay/20 mt-8">
+          <div className="mt-auto pt-12 pb-8 border-t border-clay/20">
             <p className="font-accent text-base italic text-medium-gray">
               Spaces worth coming home to.
             </p>

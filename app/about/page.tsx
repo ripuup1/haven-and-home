@@ -30,7 +30,7 @@ const offerings = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-soft-white">
+    <div>
       {/* Hero Section */}
       <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -47,7 +47,7 @@ export default function AboutPage() {
 
       {/* Brand Story */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-3xl rounded-2xl bg-soft-white/90 shadow-sm backdrop-blur-sm p-6 sm:p-10">
           <ScrollReveal>
             <div className="space-y-6 font-body text-base leading-relaxed text-medium-gray sm:text-lg">
               <p>
@@ -83,8 +83,8 @@ export default function AboutPage() {
       </section>
 
       {/* What You'll Find Here */}
-      <section className="bg-cream px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-6xl rounded-2xl bg-soft-white/90 shadow-sm backdrop-blur-sm p-6 sm:p-10">
           <ScrollReveal>
             <h2 className="font-heading text-3xl font-bold text-charcoal text-center sm:text-4xl">
               What You&apos;ll Find Here
@@ -113,14 +113,14 @@ export default function AboutPage() {
       </section>
 
       {/* Email Capture */}
-      <section className="bg-soft-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <ScrollReveal>
           <EmailCapture />
         </ScrollReveal>
       </section>
 
       {/* Affiliate Disclosure */}
-      <section className="border-t border-clay/15 bg-soft-white px-4 py-10 sm:px-6 lg:px-8">
+      <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>
             <div className="rounded-lg bg-cream/60 p-6">

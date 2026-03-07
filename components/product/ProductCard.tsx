@@ -53,7 +53,7 @@ export default function ProductCard({
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="group flex flex-col sm:flex-row rounded-xl border border-[#e5ddd0] bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-charcoal/8">
+    <div className="group flex flex-col sm:flex-row rounded-xl border border-clay/20 bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg hover:shadow-charcoal/8">
       {/* Product Image */}
       <div className="relative w-full sm:w-48 md:w-56 shrink-0 aspect-square sm:aspect-auto sm:min-h-full overflow-hidden bg-cream">
         {imageError ? (
@@ -98,12 +98,12 @@ export default function ProductCard({
           </h3>
 
           {/* Price */}
-          <p className="text-xl font-bold text-terracotta">{price}</p>
+          <p className="font-body text-xl font-bold text-terracotta">{price}</p>
 
           {/* Rating */}
           <div className="flex items-center gap-2">
             <StarRating rating={rating} />
-            <span className="text-xs text-medium-gray">({reviewCount})</span>
+            <span className="font-body text-xs text-medium-gray">({reviewCount})</span>
           </div>
 
           {/* Description */}

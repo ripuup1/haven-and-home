@@ -12,7 +12,7 @@ export default function ShopThisPost({ products }: ShopThisPostProps) {
   if (products.length === 0) return null;
 
   return (
-    <aside className="rounded-xl border border-[#e5ddd0] bg-cream p-5">
+    <aside className="rounded-xl border border-clay/20 bg-cream p-5">
       <h3 className="font-heading text-lg font-bold text-charcoal mb-4">
         Shop This Post
       </h3>
@@ -37,7 +37,7 @@ export default function ShopThisPost({ products }: ShopThisPostProps) {
         ))}
       </ul>
 
-      <p className="mt-4 border-t border-[#e5ddd0] pt-3 font-body text-[11px] leading-relaxed text-medium-gray">
+      <p className="mt-4 border-t border-clay/20 pt-3 font-body text-[11px] leading-relaxed text-medium-gray">
         As an Amazon Associate, we earn from qualifying purchases.
       </p>
     </aside>

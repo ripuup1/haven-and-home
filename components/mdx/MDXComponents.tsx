@@ -66,7 +66,7 @@ function StyledBlockquote({
 }: React.ComponentPropsWithoutRef<'blockquote'>) {
   return (
     <blockquote
-      className="font-accent italic border-l-4 border-terracotta pl-4 my-6 text-stone-600"
+      className="font-accent italic border-l-4 border-terracotta pl-4 my-6 text-medium-gray"
       {...props}
     >
       {children}

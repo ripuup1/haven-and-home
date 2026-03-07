@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -42,18 +43,18 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a
+          <Link
             href="/blog"
             className="rounded-lg bg-terracotta px-8 py-3 font-body text-sm font-bold text-white transition-colors hover:bg-terracotta-dark"
           >
             Read the Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/favorites"
             className="rounded-lg border-2 border-charcoal/20 px-8 py-3 font-body text-sm font-bold text-charcoal transition-colors hover:border-terracotta hover:text-terracotta"
           >
             Shop Our Picks
-          </a>
+          </Link>
         </div>
       </motion.div>
 

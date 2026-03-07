@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <article className="bg-soft-white">
+    <article>
       {/* Hero Image */}
       <div className="relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
         <Image
@@ -107,99 +107,104 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
 
-      {/* Meta bar */}
-      <div className="border-b border-[#e5ddd0] bg-cream">
-        <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-4 px-6 py-4 font-body text-sm text-medium-gray">
-          <span>By {post.frontmatter.author || "Haven & Home"}</span>
-          <span className="text-clay">|</span>
-          <span>{formatDate(post.frontmatter.date)}</span>
-          <span className="text-clay">|</span>
-          <span>{post.readTime.text}</span>
-        </div>
-      </div>
-
-      {/* Content + Sidebar */}
-      <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="flex gap-12">
-          {/* Main Content */}
-          <div className="min-w-0 flex-1">
-            <div className="prose mx-auto max-w-none lg:max-w-[720px]">
-              <MDXRemote
-                source={post.content}
-                components={mdxComponents}
-                options={{
-                  mdxOptions: {
-                    remarkPlugins: [remarkGfm],
-                    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
-                  },
-                }}
-              />
-            </div>
-
-            {/* Affiliate Disclosure */}
-            <div className="mx-auto mt-12 max-w-[720px] rounded-lg border border-[#e5ddd0] bg-cream p-6 font-body text-sm leading-relaxed text-medium-gray">
-              <p className="font-bold text-charcoal">Affiliate Disclosure</p>
-              <p className="mt-1">
-                This post contains affiliate links. Haven & Home may earn a
-                commission on purchases made through these links, at no extra
-                cost to you. We only recommend products we genuinely love.
-              </p>
+      {/* Floating Card Content */}
+      <div className="px-4 sm:px-6 lg:px-8 py-10">
+        <div className="mx-auto max-w-6xl rounded-2xl bg-soft-white/90 shadow-sm backdrop-blur-sm">
+          {/* Meta bar */}
+          <div className="border-b border-clay/20 rounded-t-2xl bg-cream/80 backdrop-blur-sm">
+            <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-4 px-6 py-4 font-body text-sm text-medium-gray">
+              <span>By {post.frontmatter.author || "Haven & Home"}</span>
+              <span className="text-clay">|</span>
+              <span>{formatDate(post.frontmatter.date)}</span>
+              <span className="text-clay">|</span>
+              <span>{post.readTime.text}</span>
             </div>
           </div>
 
-          {/* Sidebar */}
-          <aside className="hidden w-72 shrink-0 lg:block">
-            <div className="sticky top-24 space-y-8">
-              {headings.length > 0 && <TableOfContents headings={headings} />}
-              {products.length > 0 && <ShopThisPost products={products} />}
-              {/* Email Signup Mini */}
-              <div className="rounded-xl border border-[#e5ddd0] bg-cream p-6">
-                <h3 className="font-heading text-lg font-bold text-charcoal">
-                  Get Inspired Weekly
-                </h3>
-                <p className="mt-2 font-body text-sm text-medium-gray">
-                  Our best finds, tips, and deals — delivered every Thursday.
-                </p>
-                <form className="mt-4 space-y-3">
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    className="w-full rounded-lg border border-clay/30 bg-soft-white px-3 py-2 font-body text-sm text-charcoal outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta"
+          {/* Content + Sidebar */}
+          <div className="px-6 py-12">
+            <div className="flex gap-12">
+              {/* Main Content */}
+              <div className="min-w-0 flex-1">
+                <div className="prose mx-auto max-w-none lg:max-w-[720px]">
+                  <MDXRemote
+                    source={post.content}
+                    components={mdxComponents}
+                    options={{
+                      mdxOptions: {
+                        remarkPlugins: [remarkGfm],
+                        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+                      },
+                    }}
                   />
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-terracotta py-2 font-body text-sm font-bold text-white transition-colors hover:bg-terracotta-dark"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </aside>
-        </div>
+                </div>
 
-        {/* Related Posts */}
-        {finalRelated.length > 0 && (
-          <section className="mt-16 border-t border-[#e5ddd0] pt-12">
-            <h2 className="mb-8 text-center font-heading text-2xl font-bold text-charcoal">
-              You Might Also Love
-            </h2>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {finalRelated.map((p) => (
-                <BlogCard
-                  key={p.frontmatter.slug}
-                  title={p.frontmatter.title}
-                  slug={p.frontmatter.slug}
-                  excerpt={p.frontmatter.excerpt}
-                  category={p.frontmatter.category}
-                  featuredImage={p.frontmatter.featuredImage}
-                  readTime={p.readTime.text}
-                  date={formatDate(p.frontmatter.date)}
-                />
-              ))}
+                {/* Affiliate Disclosure */}
+                <div className="mx-auto mt-12 max-w-[720px] rounded-lg border border-clay/20 bg-cream p-6 font-body text-sm leading-relaxed text-medium-gray">
+                  <p className="font-bold text-charcoal">Affiliate Disclosure</p>
+                  <p className="mt-1">
+                    This post contains affiliate links. Haven & Home may earn a
+                    commission on purchases made through these links, at no extra
+                    cost to you. We only recommend products we genuinely love.
+                  </p>
+                </div>
+              </div>
+
+              {/* Sidebar */}
+              <aside className="hidden w-72 shrink-0 lg:block">
+                <div className="sticky top-24 space-y-8">
+                  {headings.length > 0 && <TableOfContents headings={headings} />}
+                  {products.length > 0 && <ShopThisPost products={products} />}
+                  {/* Email Signup Mini */}
+                  <div className="rounded-xl border border-clay/20 bg-cream p-6">
+                    <h3 className="font-heading text-lg font-bold text-charcoal">
+                      Get Inspired Weekly
+                    </h3>
+                    <p className="mt-2 font-body text-sm text-medium-gray">
+                      Our best finds, tips, and deals — delivered every Thursday.
+                    </p>
+                    <form className="mt-4 space-y-3">
+                      <input
+                        type="email"
+                        placeholder="your@email.com"
+                        className="w-full rounded-lg border border-clay/30 bg-soft-white px-3 py-2 font-body text-sm text-charcoal outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta"
+                      />
+                      <button
+                        type="submit"
+                        className="w-full rounded-lg bg-terracotta py-2 font-body text-sm font-bold text-white transition-colors hover:bg-terracotta-dark"
+                      >
+                        Subscribe
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </aside>
             </div>
-          </section>
-        )}
+
+            {/* Related Posts */}
+            {finalRelated.length > 0 && (
+              <section className="mt-16 border-t border-clay/20 pt-12">
+                <h2 className="mb-8 text-center font-heading text-2xl font-bold text-charcoal">
+                  You Might Also Love
+                </h2>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  {finalRelated.map((p) => (
+                    <BlogCard
+                      key={p.frontmatter.slug}
+                      title={p.frontmatter.title}
+                      slug={p.frontmatter.slug}
+                      excerpt={p.frontmatter.excerpt}
+                      category={p.frontmatter.category}
+                      featuredImage={p.frontmatter.featuredImage}
+                      readTime={p.readTime.text}
+                      date={formatDate(p.frontmatter.date)}
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+        </div>
       </div>
     </article>
   );

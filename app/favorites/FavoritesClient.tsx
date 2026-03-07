@@ -35,7 +35,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,240",
     description:
       "Expandable bamboo dividers that fit any drawer size. Perfect for utensils, gadgets, and junk drawer chaos. We use these in every kitchen we organize.",
-    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE01?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -46,7 +46,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "1,870",
     description:
       "Heavy, sturdy, and genuinely beautiful on the counter. The matte finish resists fingerprints and comes in six neutral colorways.",
-    imageUrl: "https://images.unsplash.com/photo-1556909172-89cf0b8fdd5d?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1574269923091-6ceab0629c99?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE02?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -57,7 +57,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "5,120",
     description:
       "12-piece borosilicate glass set with bamboo lids. Microwave and dishwasher safe. Makes your pantry look like a magazine spread.",
-    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE03?tag=havenandhomec-20",
     category: "Kitchen",
   },
@@ -69,7 +69,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,430",
     description:
       "Solid teak wood with a waterproof finish. Turns any shower into a spa experience. Holds up beautifully even after months of daily use.",
-    imageUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE04?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -80,7 +80,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "1,560",
     description:
       "Soap dispenser, toothbrush holder, tumbler, and soap dish in a sleek matte black finish. Instant bathroom upgrade for under $35.",
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1585412727339-54e4bae3cdd0?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE05?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -91,7 +91,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "8,910",
     description:
       "Hotel-quality Turkish cotton at a fraction of the price. Gets softer with every wash. The oatmeal color is our absolute favorite.",
-    imageUrl: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1600210491892-ed7f3866ae42?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE06?tag=havenandhomec-20",
     category: "Bathroom",
   },
@@ -103,7 +103,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "4,320",
     description:
       "Stonewashed French linen that's impossibly soft from day one. The relaxed, lived-in look is effortlessly chic. Includes two pillow shams.",
-    imageUrl: "https://images.unsplash.com/photo-1522771739-9e2d5e7a0c9e?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1616627561950-9f746e330187?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE07?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -114,7 +114,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,150",
     description:
       "Minimalist wall-mounted shelves that replace bulky nightstands. Perfect for small bedrooms. Each shelf holds up to 15 lbs.",
-    imageUrl: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE08?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -125,7 +125,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "12,430",
     description:
       "100% blackout with a linen-look texture. Block light without sacrificing style. The ivory color looks incredible in any bedroom.",
-    imageUrl: "https://images.unsplash.com/photo-1522771739-9e2d5e7a0c9e?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE09?tag=havenandhomec-20",
     category: "Bedroom",
   },
@@ -137,7 +137,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "6,780",
     description:
       "The cozy factor is off the charts. Handwoven chenille that drapes beautifully over a sofa or chair. A best-seller for a reason.",
-    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1555041469-a586c1ea9b63?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE10?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -148,7 +148,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,670",
     description:
       "Natural seagrass with cotton rope handles. Three nesting sizes for flexible storage. Gorgeous as plant holders or blanket baskets.",
-    imageUrl: "https://images.unsplash.com/photo-1555041469-a586c1ea9b63?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE11?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -159,7 +159,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "2,890",
     description:
       "Brushed gold frame with a subtle Art Deco feel. Makes any room look bigger and brighter. The quality rivals mirrors three times the price.",
-    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE12?tag=havenandhomec-20",
     category: "Living Room",
   },
@@ -193,7 +193,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "7,890",
     description:
       "Memory foam lumbar pillow with a breathable mesh cover. A game-changer for long work days. Fits any office chair or car seat.",
-    imageUrl: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1593642634443-44adaa06623a?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE15?tag=havenandhomec-20",
     category: "Office",
   },
@@ -205,7 +205,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "5,670",
     description:
       "60 stems of natural and white pampas grass. Lasts forever, no watering needed. The easiest way to add texture and warmth to any room.",
-    imageUrl: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE16?tag=havenandhomec-20",
     category: "Decor",
   },
@@ -216,7 +216,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "3,450",
     description:
       "Hand-poured soy candles in amber glass jars. Scents include vanilla bean, cedarwood, and lavender sage. Clean burn with incredible throw.",
-    imageUrl: "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1602607688289-1704735bfcb8?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE17?tag=havenandhomec-20",
     category: "Decor",
   },
@@ -227,7 +227,7 @@ const PRODUCTS: Product[] = [
     reviewCount: "4,120",
     description:
       "Pre-washed linen blend in coordinating neutral tones. Hidden zipper closure. The fastest way to refresh your sofa or bed for under $30.",
-    imageUrl: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
     affiliateUrl: "https://www.amazon.com/dp/B0EXAMPLE18?tag=havenandhomec-20",
     category: "Decor",
   },
@@ -245,7 +245,7 @@ export default function FavoritesClient() {
         );
 
   return (
-    <div className="bg-soft-white">
+    <div>
       {/* Page Header */}
       <section className="bg-cream px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-7xl text-center">
@@ -261,20 +261,18 @@ export default function FavoritesClient() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="sticky top-0 z-20 border-b border-clay/10 bg-soft-white/95 backdrop-blur-sm px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <CategoryFilter
-            categories={CATEGORIES}
-            activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
-          />
-        </div>
-      </section>
-
-      {/* Product Grid */}
+      {/* Floating Card Content */}
       <section className="px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl rounded-2xl bg-soft-white/90 shadow-sm backdrop-blur-sm p-4 sm:p-6 lg:p-8">
+          {/* Category Filter */}
+          <div className="border-b border-clay/10 pb-4 mb-8">
+            <CategoryFilter
+              categories={CATEGORIES}
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+            />
+          </div>
+
           {/* Results Count */}
           <p className="mb-6 font-body text-sm text-medium-gray">
             Showing {filteredProducts.length}{" "}
@@ -285,7 +283,7 @@ export default function FavoritesClient() {
           </p>
 
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
               {filteredProducts.map((product, index) => (
                 <ScrollReveal key={product.name} delay={index * 0.05}>
                   <ProductCard
@@ -321,7 +319,7 @@ export default function FavoritesClient() {
       </section>
 
       {/* Affiliate Disclosure */}
-      <section className="border-t border-clay/15 bg-soft-white px-4 py-10 sm:px-6 lg:px-8">
+      <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>
             <div className="rounded-lg bg-cream/60 p-6">
