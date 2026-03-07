@@ -29,9 +29,11 @@ body {
 /* Fixed wood background — runs full page, content floats on top */
 .texture-bg {
   position: fixed;
-  inset: 0;
+  inset: -15% 0;
   z-index: -1;
-  background: url('/images/wood-bg.jpg') center / cover no-repeat fixed;
+  background: url('/images/wood-bg.jpg') center / cover no-repeat;
+  opacity: 0.75;
+  will-change: transform;
 }
 
 /* Prose styles for MDX content */

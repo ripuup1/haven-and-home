@@ -7,24 +7,25 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-4 text-center">
-      {/* Background lifestyle image */}
+      {/* Wood background — matches the fixed texture, local to hero */}
       <Image
-        src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1920&q=80"
-        alt="Warm, styled living room with natural light"
+        src="/images/wood-bg.jpg"
+        alt=""
         fill
         priority
         sizes="100vw"
         className="object-cover"
       />
 
-      {/* Warm overlay for text readability */}
+      {/* Subtle dark vignette for depth and text readability */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-cream/70 backdrop-blur-[2px]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/15 to-black/10"
       />
+      {/* Warm cream fade at bottom to blend into page content */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-cream/40 via-transparent to-cream/80"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream/60"
       />
 
       {/* Content */}

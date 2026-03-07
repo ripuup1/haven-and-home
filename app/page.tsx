@@ -77,7 +77,7 @@ export default function HomePage() {
               <ScrollReveal key={post.frontmatter.slug} delay={index * 0.15}>
                 <Link
                   href={`/blog/${post.frontmatter.slug}`}
-                  className="group block overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                  className="group block overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/10"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
@@ -191,7 +191,7 @@ export default function HomePage() {
                     href={product.url}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    className="group flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-clay/15 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                    className="group flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-clay/15 bg-white transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/10"
                   >
                     <div className="relative aspect-square w-full overflow-hidden bg-cream">
                       <Image

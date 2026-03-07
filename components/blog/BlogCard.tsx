@@ -23,7 +23,7 @@ export default function BlogCard({
   return (
     <Link
       href={`/blog/${slug}`}
-      className="group block overflow-hidden rounded-lg bg-soft-white shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-md"
+      className="group block overflow-hidden rounded-lg bg-soft-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/10"
     >
       {/* Featured Image */}
       <div className="relative aspect-[3/2] w-full overflow-hidden">

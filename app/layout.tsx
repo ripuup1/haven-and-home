@@ -3,6 +3,7 @@ import { Playfair_Display, Lato, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ParallaxBackground from "@/components/ui/ParallaxBackground";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -56,8 +57,8 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${lato.variable} ${cormorant.variable} antialiased`}
       >
-        {/* Fixed texture background for floating content effect */}
-        <div className="texture-bg" aria-hidden="true" />
+        {/* Fixed texture background with parallax for floating content effect */}
+        <ParallaxBackground />
         <Header />
         <main className="relative min-h-screen">{children}</main>
         <Footer />
