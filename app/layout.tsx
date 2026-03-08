@@ -33,14 +33,23 @@ export const metadata: Metadata = {
   },
   description:
     "Curated home decor ideas, organization tips, and product recommendations to help you create spaces worth coming home to.",
-  metadataBase: new URL("https://havenandhome.co"),
+  metadataBase: new URL("https://www.havenandhome.live"),
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Haven & Home",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 800,
+        height: 800,
+        alt: "Haven & Home",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
+    images: ["/images/logo.png"],
   },
   other: {
     "p:domain_verify": "92fdeb43605469943893ede491aaf740",
