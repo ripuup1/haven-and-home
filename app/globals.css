@@ -45,7 +45,9 @@ body {
     0 4px 6px rgba(61, 61, 61, 0.1);
 }
 
-/* Prose styles for MDX content */
+/* Prose styles for MDX content
+   Using :where() for child selectors so Tailwind utilities can override them.
+   This makes .not-prose components (like ProductCard) render correctly. */
 .prose {
   max-width: 720px;
   font-size: 1.125rem;
@@ -53,7 +55,7 @@ body {
   color: var(--color-charcoal);
 }
 
-.prose h1 {
+.prose :where(h1) {
   font-family: var(--font-heading), serif;
   font-size: 2.5rem;
   font-weight: 700;
@@ -63,7 +65,7 @@ body {
   color: var(--color-charcoal);
 }
 
-.prose h2 {
+.prose :where(h2) {
   font-family: var(--font-heading), serif;
   font-size: 1.875rem;
   font-weight: 700;
@@ -73,7 +75,7 @@ body {
   color: var(--color-charcoal);
 }
 
-.prose h3 {
+.prose :where(h3) {
   font-family: var(--font-heading), serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -83,45 +85,45 @@ body {
   color: var(--color-charcoal);
 }
 
-.prose p {
+.prose :where(p) {
   margin-bottom: 1.25rem;
 }
 
-.prose a {
+.prose :where(a) {
   color: var(--color-terracotta);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s;
 }
 
-.prose a:hover {
+.prose :where(a:hover) {
   color: var(--color-terracotta-dark);
 }
 
-.prose ul,
-.prose ol {
+.prose :where(ul),
+.prose :where(ol) {
   margin-bottom: 1.25rem;
   padding-left: 1.5rem;
 }
 
-.prose li {
+.prose :where(li) {
   margin-bottom: 0.5rem;
 }
 
-.prose ul li {
+.prose :where(ul li) {
   list-style-type: disc;
 }
 
-.prose ol li {
+.prose :where(ol li) {
   list-style-type: decimal;
 }
 
-.prose strong {
+.prose :where(strong) {
   font-weight: 600;
   color: var(--color-charcoal);
 }
 
-.prose blockquote {
+.prose :where(blockquote) {
   font-family: var(--font-accent), serif;
   font-style: italic;
   font-size: 1.25rem;
@@ -132,12 +134,12 @@ body {
   color: var(--color-medium-gray);
 }
 
-.prose img {
+.prose :where(img) {
   border-radius: 0.5rem;
   margin: 1.5rem 0;
 }
 
-.prose hr {
+.prose :where(hr) {
   border: none;
   border-top: 1px solid rgba(184, 134, 107, 0.2);
   margin: 2rem 0;
