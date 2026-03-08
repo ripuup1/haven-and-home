@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   other: {
-    "p:domain_verify": "PINTEREST_VERIFICATION_CODE",
+    "p:domain_verify": "92fdeb43605469943893ede491aaf740",
   },
 };
 
