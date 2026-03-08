@@ -55,22 +55,22 @@ export default function Header() {
   };
 
   const linkClasses = (href: string) =>
-    `font-body text-sm font-medium tracking-wide uppercase transition-colors relative py-1 ${
+    `font-body text-sm font-semibold tracking-widest uppercase transition-colors relative py-1 ${
       isActive(href)
         ? "text-terracotta"
-        : "text-charcoal hover:text-terracotta"
+        : "text-charcoal/80 hover:text-terracotta"
     }`;
 
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-cream/80 backdrop-blur-md border-b border-clay/15 shadow-sm shadow-charcoal/5"
-          : "bg-transparent border-b border-transparent"
+          ? "bg-cream/85 backdrop-blur-lg border-b border-clay/20 shadow-md shadow-charcoal/8"
+          : "bg-cream/40 backdrop-blur-sm border-b border-clay/10"
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between md:justify-center">
+        <div className="flex h-22 items-center justify-between md:justify-center">
           {/* Desktop: Left nav links */}
           <nav className="hidden md:flex items-center gap-8">
             {leftLinks.map((link) => (
@@ -84,12 +84,12 @@ export default function Header() {
           </nav>
 
           {/* Center logo */}
-          <Link href="/" className="group flex items-center md:mx-12">
+          <Link href="/" className="group flex items-center gap-3 md:mx-14">
             <Image
               src="/images/logo-transparent.png"
               alt="Haven & Home"
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               className="transition-transform duration-300 group-hover:scale-105"
               priority
             />
