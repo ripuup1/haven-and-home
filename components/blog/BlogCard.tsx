@@ -45,7 +45,7 @@ export default function BlogCard({
         <PinItButton
           imageUrl={featuredImage}
           description={`${title} — Haven & Home`}
-          pageUrl={`https://havenandhome.co/blog/${slug}`}
+          pageUrl={`https://www.havenandhome.live/blog/${slug}`}
         />
       </div>
 

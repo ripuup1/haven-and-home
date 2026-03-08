@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { getAllPosts } from "@/lib/mdx";
 import { formatDate } from "@/lib/utils";
 import BlogListingClient from "./BlogListingClient";
@@ -28,5 +29,9 @@ export default function BlogPage() {
     category: post.frontmatter.category,
   }));
 
-  return <BlogListingClient posts={posts} popularPosts={popularPosts} />;
+  return (
+    <Suspense>
+      <BlogListingClient posts={posts} popularPosts={popularPosts} />
+    </Suspense>
+  );
 }

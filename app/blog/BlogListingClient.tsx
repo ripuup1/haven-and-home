@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import BlogGrid from "@/components/blog/BlogGrid";
 import CategoryFilter from "@/components/blog/CategoryFilter";
 import Sidebar from "@/components/layout/Sidebar";
@@ -42,7 +43,16 @@ export default function BlogListingClient({
   posts,
   popularPosts,
 }: BlogListingClientProps) {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState("All");
+
+  // Read ?category= from URL on mount
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat && CATEGORIES.some((c) => c.toLowerCase() === cat.toLowerCase())) {
+      setActiveCategory(CATEGORIES.find((c) => c.toLowerCase() === cat.toLowerCase()) || "All");
+    }
+  }, [searchParams]);
 
   const filteredPosts =
     activeCategory === "All"

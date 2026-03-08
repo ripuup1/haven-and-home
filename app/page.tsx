@@ -4,6 +4,7 @@ import Hero from "@/components/ui/Hero";
 import EmailCapture from "@/components/ui/EmailCapture";
 import BlogCard from "@/components/blog/BlogCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import ShopCarousel from "@/components/ui/ShopCarousel";
 import { getAllPosts } from "@/lib/mdx";
 import { formatDate } from "@/lib/utils";
 
@@ -183,56 +184,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="relative mt-10">
-              <div className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-none -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
-                {shopPicks.map((product) => (
-                  <a
-                    key={product.name}
-                    href={product.url}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="group flex w-64 shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-clay/15 bg-white transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/10"
-                  >
-                    <div className="relative aspect-square w-full overflow-hidden bg-cream">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        sizes="256px"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col justify-between p-4">
-                      <div>
-                        <h3 className="font-heading text-base font-bold leading-snug text-charcoal transition-colors group-hover:text-terracotta">
-                          {product.name}
-                        </h3>
-                        <p className="mt-1 font-body text-lg font-bold text-terracotta">
-                          {product.price}
-                        </p>
-                      </div>
-                      <span className="mt-3 inline-flex items-center gap-1 font-body text-sm font-medium text-terracotta transition-colors group-hover:text-terracotta-dark">
-                        Shop Now
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M7 17L17 7" />
-                          <path d="M7 7h10v10" />
-                        </svg>
-                      </span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+            <ShopCarousel products={shopPicks} />
           </ScrollReveal>
         </div>
       </section>

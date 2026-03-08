@@ -12,6 +12,7 @@ import TableOfContents from "@/components/blog/TableOfContents";
 import ShopThisPost from "@/components/product/ShopThisPost";
 import BlogCard from "@/components/blog/BlogCard";
 import PinItButton from "@/components/ui/PinItButton";
+import MiniEmailSignup from "@/components/ui/MiniEmailSignup";
 import type { Metadata } from "next";
 
 interface BlogPostPageProps {
@@ -166,27 +167,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   {headings.length > 0 && <TableOfContents headings={headings} />}
                   {products.length > 0 && <ShopThisPost products={products} />}
                   {/* Email Signup Mini */}
-                  <div className="rounded-xl border border-clay/20 bg-cream p-6">
-                    <h3 className="font-heading text-lg font-bold text-charcoal">
-                      Get Inspired Weekly
-                    </h3>
-                    <p className="mt-2 font-body text-sm text-medium-gray">
-                      Our best finds, tips, and deals — delivered every Thursday.
-                    </p>
-                    <form className="mt-4 space-y-3">
-                      <input
-                        type="email"
-                        placeholder="your@email.com"
-                        className="w-full rounded-lg border border-clay/30 bg-soft-white px-3 py-2 font-body text-sm text-charcoal outline-none focus:border-terracotta focus:ring-1 focus:ring-terracotta"
-                      />
-                      <button
-                        type="submit"
-                        className="w-full rounded-lg bg-terracotta py-2 font-body text-sm font-bold text-white transition-colors hover:bg-terracotta-dark"
-                      >
-                        Subscribe
-                      </button>
-                    </form>
-                  </div>
+                  <MiniEmailSignup />
                 </div>
               </aside>
             </div>
