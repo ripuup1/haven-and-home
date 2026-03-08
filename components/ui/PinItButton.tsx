@@ -24,7 +24,7 @@ export default function PinItButton({
   return (
     <button
       onClick={handlePin}
-      className="absolute top-3 right-3 z-10 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 font-body text-xs font-semibold text-[#E60023] shadow-md backdrop-blur-sm opacity-0 transition-all duration-200 group-hover:opacity-100 hover:bg-white hover:shadow-lg"
+      className="absolute top-3 right-3 z-10 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 font-body text-xs font-semibold text-[#E60023] shadow-md backdrop-blur-sm opacity-100 md:opacity-0 transition-all duration-200 md:group-hover:opacity-100 hover:bg-white hover:shadow-lg"
       aria-label="Save to Pinterest"
     >
       <svg

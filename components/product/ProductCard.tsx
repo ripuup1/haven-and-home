@@ -54,7 +54,7 @@ export default function ProductCard({
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="group flex flex-col sm:flex-row rounded-xl border border-clay/20 bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/12">
+    <div className="not-prose group flex flex-col sm:flex-row rounded-xl border border-clay/20 bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/12">
       {/* Product Image */}
       <div className="relative w-full sm:w-48 md:w-56 shrink-0 aspect-square sm:aspect-auto sm:min-h-full overflow-hidden bg-cream">
         <PinItButton

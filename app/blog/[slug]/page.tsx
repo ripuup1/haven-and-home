@@ -132,8 +132,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Content + Sidebar */}
-          <div className="px-6 py-12">
-            <div className="flex gap-12">
+          <div className="px-4 py-8 sm:px-6 sm:py-12">
+            <div className="flex flex-col lg:flex-row lg:gap-12">
               {/* Main Content */}
               <div className="min-w-0 flex-1">
                 <div className="prose mx-auto max-w-none lg:max-w-[720px]">

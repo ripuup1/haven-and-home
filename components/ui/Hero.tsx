@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[60vh] flex-col items-center justify-center px-4 pt-8 text-center">
+    <section className="relative flex min-h-[60vh] flex-col items-center justify-center px-4 pt-8 pb-20 text-center">
       {/* Content card — frosted glass panel on the wood */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -50,7 +50,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-6 z-10 flex flex-col items-center gap-1"
+        className="absolute bottom-8 z-10 flex flex-col items-center gap-1"
       >
         <span className="font-body text-xs uppercase tracking-widest text-charcoal/40">
           Scroll
