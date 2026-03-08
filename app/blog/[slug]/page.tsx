@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <PinItButton
           imageUrl={post.frontmatter.featuredImage}
           description={`${post.frontmatter.title} — ${post.frontmatter.excerpt} | Haven & Home`}
-          pageUrl={`https://havenandhome.co/blog/${slug}`}
+          pageUrl={`https://www.havenandhome.live/blog/${slug}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
         <div className="absolute inset-0 flex items-end">

@@ -18,152 +18,195 @@
   --font-accent: var(--font-cormorant);
 }
 
-body {
-  background-color: var(--color-soft-white);
-  color: var(--color-charcoal);
-  font-family: var(--font-body), system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* ---------------------------------------------------------------
+   All custom styles live inside @layer base so that Tailwind
+   utility classes (text-white, bg-terracotta, etc.) always win.
+   This is critical for ProductCard buttons inside .prose.
+--------------------------------------------------------------- */
+@layer base {
+  body {
+    background-color: var(--color-soft-white);
+    color: var(--color-charcoal);
+    font-family: var(--font-body), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-/* Fixed wood background — runs full page, content floats on top */
-.texture-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: url('/images/wood-bg.jpg') center / cover no-repeat;
-  opacity: 0.6;
-}
+  /* Fixed wood background — runs full page, content floats on top */
+  .texture-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('/images/wood-bg.jpg') center / cover no-repeat;
+    opacity: 0.6;
+  }
 
+  /* 3D letterpress effect for the logo */
+  .logo-3d {
+    text-shadow:
+      0 1px 0 rgba(184, 134, 107, 0.4),
+      0 2px 0 rgba(184, 134, 107, 0.3),
+      0 3px 0 rgba(184, 134, 107, 0.2),
+      0 4px 6px rgba(61, 61, 61, 0.1);
+  }
 
-/* 3D letterpress effect for the logo */
-.logo-3d {
-  text-shadow:
-    0 1px 0 rgba(184, 134, 107, 0.4),
-    0 2px 0 rgba(184, 134, 107, 0.3),
-    0 3px 0 rgba(184, 134, 107, 0.2),
-    0 4px 6px rgba(61, 61, 61, 0.1);
-}
+  /* Prose styles for MDX content
+     Using :where() for child selectors so Tailwind utilities override them.
+     Wrapped in @layer base so utilities always win regardless of source order. */
+  .prose {
+    max-width: 720px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-charcoal);
+  }
 
-/* Prose styles for MDX content
-   Using :where() for child selectors so Tailwind utilities can override them.
-   This makes .not-prose components (like ProductCard) render correctly. */
-.prose {
-  max-width: 720px;
-  font-size: 1.125rem;
-  line-height: 1.8;
-  color: var(--color-charcoal);
-}
+  @media (min-width: 640px) {
+    .prose {
+      font-size: 1.125rem;
+      line-height: 1.8;
+    }
+  }
 
-.prose :where(h1) {
-  font-family: var(--font-heading), serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--color-charcoal);
-}
+  .prose :where(h1) {
+    font-family: var(--font-heading), serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-charcoal);
+  }
 
-.prose :where(h2) {
-  font-family: var(--font-heading), serif;
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  color: var(--color-charcoal);
-}
+  @media (min-width: 640px) {
+    .prose :where(h1) {
+      font-size: 2.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
 
-.prose :where(h3) {
-  font-family: var(--font-heading), serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-top: 1.75rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-charcoal);
-}
+  .prose :where(h2) {
+    font-family: var(--font-heading), serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-charcoal);
+  }
 
-.prose :where(p) {
-  margin-bottom: 1.25rem;
-}
+  @media (min-width: 640px) {
+    .prose :where(h2) {
+      font-size: 1.875rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+  }
 
-.prose :where(a) {
-  color: var(--color-terracotta);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.2s;
-}
+  .prose :where(h3) {
+    font-family: var(--font-heading), serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-charcoal);
+  }
 
-.prose :where(a:hover) {
-  color: var(--color-terracotta-dark);
-}
+  @media (min-width: 640px) {
+    .prose :where(h3) {
+      font-size: 1.5rem;
+      margin-top: 1.75rem;
+    }
+  }
 
-.prose :where(ul),
-.prose :where(ol) {
-  margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
-}
+  .prose :where(p) {
+    margin-bottom: 1.25rem;
+  }
 
-.prose :where(li) {
-  margin-bottom: 0.5rem;
-}
+  .prose :where(a) {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+  }
 
-.prose :where(ul li) {
-  list-style-type: disc;
-}
+  .prose :where(a:hover) {
+    color: var(--color-terracotta-dark);
+  }
 
-.prose :where(ol li) {
-  list-style-type: decimal;
-}
+  .prose :where(ul),
+  .prose :where(ol) {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
 
-.prose :where(strong) {
-  font-weight: 600;
-  color: var(--color-charcoal);
-}
+  .prose :where(li) {
+    margin-bottom: 0.5rem;
+  }
 
-.prose :where(blockquote) {
-  font-family: var(--font-accent), serif;
-  font-style: italic;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  border-left: 3px solid var(--color-terracotta);
-  padding-left: 1.25rem;
-  margin: 2rem 0;
-  color: var(--color-medium-gray);
-}
+  .prose :where(ul li) {
+    list-style-type: disc;
+  }
 
-.prose :where(img) {
-  border-radius: 0.5rem;
-  margin: 1.5rem 0;
-}
+  .prose :where(ol li) {
+    list-style-type: decimal;
+  }
 
-.prose :where(hr) {
-  border: none;
-  border-top: 1px solid rgba(184, 134, 107, 0.2);
-  margin: 2rem 0;
-}
+  .prose :where(strong) {
+    font-weight: 600;
+    color: var(--color-charcoal);
+  }
 
-/* Smooth scroll for TOC links */
-html {
-  scroll-behavior: smooth;
-}
+  .prose :where(blockquote) {
+    font-family: var(--font-accent), serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    border-left: 3px solid var(--color-terracotta);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--color-medium-gray);
+  }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
+  @media (min-width: 640px) {
+    .prose :where(blockquote) {
+      font-size: 1.25rem;
+      margin: 2rem 0;
+    }
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--color-soft-white);
-}
+  .prose :where(img) {
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-clay);
-  border-radius: 4px;
-}
+  .prose :where(hr) {
+    border: none;
+    border-top: 1px solid rgba(184, 134, 107, 0.2);
+    margin: 2rem 0;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-terracotta);
+  /* Smooth scroll for TOC links */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-soft-white);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-clay);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-terracotta);
+  }
 }
