@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PinItButton from "@/components/ui/PinItButton";
 
 interface BlogCardProps {
   title: string;
@@ -39,6 +40,13 @@ export default function BlogCard({
         <span className="absolute left-3 top-3 rounded-full bg-olive px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-white">
           {category}
         </span>
+
+        {/* Pin It Button */}
+        <PinItButton
+          imageUrl={featuredImage}
+          description={`${title} — Haven & Home`}
+          pageUrl={`https://havenandhome.co/blog/${slug}`}
+        />
       </div>
 
       {/* Content */}

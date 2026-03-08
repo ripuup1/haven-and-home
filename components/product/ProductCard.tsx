@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import PinItButton from "@/components/ui/PinItButton";
 
 interface ProductCardProps {
   name: string;
@@ -56,6 +57,10 @@ export default function ProductCard({
     <div className="group flex flex-col sm:flex-row rounded-xl border border-clay/20 bg-soft-white overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-charcoal/12">
       {/* Product Image */}
       <div className="relative w-full sm:w-48 md:w-56 shrink-0 aspect-square sm:aspect-auto sm:min-h-full overflow-hidden bg-cream">
+        <PinItButton
+          imageUrl={imageUrl}
+          description={`${name} — ${price} on Amazon | Haven & Home`}
+        />
         {imageError ? (
           <div className="flex h-full w-full items-center justify-center bg-cream">
             <div className="flex flex-col items-center gap-2 text-clay/60">

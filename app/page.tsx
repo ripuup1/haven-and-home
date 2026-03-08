@@ -237,19 +237,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pinterest CTA */}
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl rounded-2xl bg-soft-white/90 p-8 shadow-sm backdrop-blur-sm sm:p-10">
+      {/* Pinterest Section */}
+      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-5xl rounded-2xl bg-soft-white/90 p-8 shadow-sm backdrop-blur-sm sm:p-12">
           <ScrollReveal>
             <div className="text-center">
-              <p className="font-accent text-lg italic text-medium-gray">
-                Find us on Pinterest for daily inspiration
+              <h2 className="font-heading text-3xl font-bold text-charcoal sm:text-4xl">
+                Follow Along on Pinterest
+              </h2>
+              <p className="mt-3 font-body text-lg text-medium-gray">
+                Daily home inspiration, product finds, and styling ideas.
               </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+              {[
+                { img: "/images/products/chunky_knit_throw_blanket_machine_washable.jpg", label: "Cozy Throws" },
+                { img: "/images/products/ceramic_vase_set_of_3_matte_white_minimalist.jpg", label: "Minimal Decor" },
+                { img: "/images/products/bamboo_desk_organizer_with_drawers.jpg", label: "Organization" },
+                { img: "/images/products/scalloped_decorative_tray.jpg", label: "Styled Trays" },
+              ].map((pin) => (
+                <a
+                  key={pin.label}
+                  href="https://pinterest.com/havenandhomeco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative aspect-square overflow-hidden rounded-xl"
+                >
+                  <Image
+                    src={pin.img}
+                    alt={pin.label}
+                    fill
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-charcoal/0 transition-colors duration-300 group-hover:bg-charcoal/30" />
+                  <span className="absolute inset-0 flex items-center justify-center font-body text-sm font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    {pin.label}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="mt-8 text-center">
               <a
                 href="https://pinterest.com/havenandhomeco"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-charcoal px-6 py-3 font-body text-sm font-bold text-white transition-colors hover:bg-charcoal/80"
+                className="inline-flex items-center gap-2 rounded-lg bg-charcoal px-6 py-3 font-body text-sm font-bold text-white transition-colors hover:bg-charcoal/80"
               >
                 <svg
                   width="18"

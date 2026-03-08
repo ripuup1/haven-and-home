@@ -11,6 +11,7 @@ import mdxComponents from "@/components/mdx/MDXComponents";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ShopThisPost from "@/components/product/ShopThisPost";
 import BlogCard from "@/components/blog/BlogCard";
+import PinItButton from "@/components/ui/PinItButton";
 import type { Metadata } from "next";
 
 interface BlogPostPageProps {
@@ -37,6 +38,10 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.frontmatter.date,
       images: [post.frontmatter.featuredImage],
+    },
+    other: {
+      "pin:media": post.frontmatter.featuredImage,
+      "pin:description": `${post.frontmatter.title} — ${post.frontmatter.excerpt} | Haven & Home`,
     },
   };
 }
@@ -85,7 +90,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article>
       {/* Hero Image */}
-      <div className="relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
+      <div className="group relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
         <Image
           src={post.frontmatter.featuredImage}
           alt={post.frontmatter.title}
@@ -93,6 +98,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           className="object-cover"
           priority
           sizes="100vw"
+        />
+        <PinItButton
+          imageUrl={post.frontmatter.featuredImage}
+          description={`${post.frontmatter.title} — ${post.frontmatter.excerpt} | Haven & Home`}
+          pageUrl={`https://havenandhome.co/blog/${slug}`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
         <div className="absolute inset-0 flex items-end">
