@@ -22,8 +22,10 @@ const CATEGORIES = [
   "Bathroom",
   "Bedroom",
   "Living Room",
+  "Organization",
   "Office",
   "Decor",
+  "Budget Finds",
 ];
 
 const PRODUCTS: Product[] = [
@@ -197,6 +199,51 @@ const PRODUCTS: Product[] = [
     affiliateUrl: "https://www.amazon.com/s?k=under+desk+cable+management+tray&tag=havenandhomec-20",
     category: "Office",
   },
+  // Organization
+  {
+    name: "Velvet Hangers (50 Pack, Non-Slip)",
+    price: "$22",
+    rating: 4.7,
+    reviewCount: "42,300+",
+    description:
+      "Slim velvet hangers that save closet space and keep clothes from slipping. Replaces bulky plastic hangers instantly. Everyone who tries these never goes back.",
+    imageUrl: "/images/products/velvet_hangers_50_pack_non_slip.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=velvet+hangers+50+pack+non+slip&tag=havenandhomec-20",
+    category: "Organization",
+  },
+  {
+    name: "Clear Stackable Shoe Boxes",
+    price: "$28",
+    rating: 4.5,
+    reviewCount: "18,400+",
+    description:
+      "See-through stackable shoe boxes that turn a messy closet floor into a clean display. Drop-front opening for easy access without unstacking.",
+    imageUrl: "/images/products/clear_stackable_shoe_boxes.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=clear+stackable+shoe+boxes+drop+front&tag=havenandhomec-20",
+    category: "Organization",
+  },
+  {
+    name: "3-Tier Rolling Storage Cart",
+    price: "$28",
+    rating: 4.6,
+    reviewCount: "24,500+",
+    description:
+      "Versatile metal cart with locking casters. Perfect for craft rooms, bathrooms, or kitchens. Wheel it where you need it and push it back when you're done.",
+    imageUrl: "/images/products/rolling_cart_3_tier.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=3+tier+rolling+cart+metal+craft+storage&tag=havenandhomec-20",
+    category: "Organization",
+  },
+  {
+    name: "Handheld Label Maker",
+    price: "$20",
+    rating: 4.4,
+    reviewCount: "16,300+",
+    description:
+      "Battery-powered label maker with a QWERTY keyboard. Print clean labels for bins, shelves, and pantry containers. The secret weapon of every organized home.",
+    imageUrl: "/images/products/handheld_label_maker.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=handheld+label+maker+tape+craft+organization&tag=havenandhomec-20",
+    category: "Organization",
+  },
   // Decor
   {
     name: "Ceramic Vase Set of 3 (Matte White)",
@@ -230,6 +277,188 @@ const PRODUCTS: Product[] = [
     imageUrl: "/images/products/floating_shelves_set_of_3_rustic_wood.jpg",
     affiliateUrl: "https://www.amazon.com/s?k=floating+shelves+set+of+3+rustic+wood&tag=havenandhomec-20",
     category: "Decor",
+  },
+  {
+    name: "Macrame Wall Hanging",
+    price: "$22",
+    rating: 4.5,
+    reviewCount: "7,200+",
+    description:
+      "Handwoven cotton macrame that adds texture and warmth to any blank wall. Bohemian without being overwhelming. Works in bedrooms, living rooms, and nurseries.",
+    imageUrl: "/images/products/macrame_wall_hanging.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=macrame+wall+hanging+boho+wall+decor&tag=havenandhomec-20",
+    category: "Decor",
+  },
+  {
+    name: "Faux Eucalyptus Stems",
+    price: "$16",
+    rating: 4.4,
+    reviewCount: "9,600+",
+    description:
+      "Realistic faux eucalyptus that looks fresh forever. Perfect in a vase on a dining table, bathroom shelf, or kitchen counter. No water, no wilting.",
+    imageUrl: "/images/products/faux_eucalyptus_stems.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=faux+eucalyptus+stems+artificial&tag=havenandhomec-20",
+    category: "Decor",
+  },
+  // Budget Finds
+  {
+    name: "LED Light Strip (Warm White)",
+    price: "$14",
+    rating: 4.4,
+    reviewCount: "20,100+",
+    description:
+      "Adhesive LED strip that adds warm ambient lighting under cabinets, behind TVs, or along shelves. Plug-in and dimmable. Transforms any room for under $15.",
+    imageUrl: "/images/products/under_cabinet_led_strip.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=led+light+strip+warm+white+dimmable&tag=havenandhomec-20",
+    category: "Budget Finds",
+  },
+  {
+    name: "Peel and Stick Backsplash Tiles",
+    price: "$32",
+    rating: 4.4,
+    reviewCount: "28,600+",
+    description:
+      "Renter-friendly backsplash tiles that peel off cleanly when you move. The single biggest visual upgrade you can make in a rental kitchen.",
+    imageUrl: "/images/products/peel_stick_backsplash_tiles.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=peel+and+stick+backsplash+tiles+kitchen&tag=havenandhomec-20",
+    category: "Budget Finds",
+  },
+  {
+    name: "Solar Globe String Lights (25ft)",
+    price: "$16",
+    rating: 4.3,
+    reviewCount: "11,200+",
+    description:
+      "Solar-powered string lights that turn on at dusk and cost nothing to run. Perfect for patios and backyards. Zero wiring, zero maintenance.",
+    imageUrl: "/images/products/solar_outdoor_string_lights.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=solar+globe+string+lights+outdoor+warm+white&tag=havenandhomec-20",
+    category: "Budget Finds",
+  },
+  {
+    name: "Cabinet Hardware Pulls (Black, 10-Pack)",
+    price: "$18",
+    rating: 4.7,
+    reviewCount: "34,200+",
+    description:
+      "Matte black cabinet pulls that make dated kitchen cabinets look modern. A five-minute swap that looks like a thousand-dollar renovation.",
+    imageUrl: "/images/products/cabinet_hardware_pulls_black.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=cabinet+hardware+pulls+modern+black+10+pack&tag=havenandhomec-20",
+    category: "Budget Finds",
+  },
+  // More Kitchen
+  {
+    name: "Magnetic Spice Jars (Set of 12)",
+    price: "$26",
+    rating: 4.5,
+    reviewCount: "6,400+",
+    description:
+      "Magnetic spice jars that mount to your fridge or a metal strip. Frees up drawer and cabinet space while keeping every spice visible and within reach.",
+    imageUrl: "/images/products/magnetic_spice_jars_set.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=magnetic+spice+jars+set+fridge&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
+  {
+    name: "Compact Dish Drying Rack",
+    price: "$28",
+    rating: 4.5,
+    reviewCount: "15,300+",
+    description:
+      "Space-saving drying rack with a drainboard that channels water straight into the sink. Holds a full load of dishes without eating up your entire counter.",
+    imageUrl: "/images/products/compact_dish_drying_rack.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=compact+dish+drying+rack+drainboard&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
+  // More Bathroom
+  {
+    name: "Eucalyptus Shower Bundle",
+    price: "$12",
+    rating: 4.3,
+    reviewCount: "8,900+",
+    description:
+      "Fresh eucalyptus that hangs from your showerhead and releases a spa-like scent when the steam hits it. Lasts 2-4 weeks. The cheapest luxury upgrade there is.",
+    imageUrl: "/images/products/eucalyptus_shower_bundle.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=eucalyptus+shower+bundle+fresh&tag=havenandhomec-20",
+    category: "Bathroom",
+  },
+  {
+    name: "Bamboo Bath Caddy Tray",
+    price: "$28",
+    rating: 4.5,
+    reviewCount: "10,200+",
+    description:
+      "Expandable bamboo tray that sits across your bathtub. Holds a book, glass of wine, phone, and candle. Turns a regular bath into a ritual.",
+    imageUrl: "/images/products/bamboo_bath_caddy_tray.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=bamboo+bath+caddy+tray+expandable&tag=havenandhomec-20",
+    category: "Bathroom",
+  },
+  // More Bedroom
+  {
+    name: "White Noise Machine",
+    price: "$24",
+    rating: 4.6,
+    reviewCount: "14,700+",
+    description:
+      "Compact sound machine with multiple noise options. Blocks out traffic, neighbors, and snoring. The single best investment for better sleep.",
+    imageUrl: "/images/products/white_noise_machine.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=white+noise+machine+sleep&tag=havenandhomec-20",
+    category: "Bedroom",
+  },
+  {
+    name: "Cotton Sleep Mask",
+    price: "$10",
+    rating: 4.5,
+    reviewCount: "8,200+",
+    description:
+      "Soft cotton sleep mask with an adjustable strap. Blocks light completely without pressing on your eyes. A tiny purchase that dramatically improves sleep.",
+    imageUrl: "/images/products/cotton_sleep_mask.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=cotton+sleep+mask+comfortable&tag=havenandhomec-20",
+    category: "Bedroom",
+  },
+  // More Living Room
+  {
+    name: "Decorative Book Stack Set",
+    price: "$22",
+    rating: 4.4,
+    reviewCount: "5,100+",
+    description:
+      "Set of styled faux books for coffee table display. Neutral tones that work with any decor. The kind of detail that makes a room feel curated.",
+    imageUrl: "/images/products/decorative_book_stack_set_coffee_table.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=decorative+book+stack+set+coffee+table&tag=havenandhomec-20",
+    category: "Living Room",
+  },
+  {
+    name: "Storage Ottoman (Foldable)",
+    price: "$34",
+    rating: 4.5,
+    reviewCount: "11,800+",
+    description:
+      "Ottoman that opens up for blanket and pillow storage. Folds flat when not in use. Extra seating, hidden storage, and a footrest in one piece.",
+    imageUrl: "/images/products/storage_ottoman_with_lid_foldable.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=storage+ottoman+foldable+with+lid&tag=havenandhomec-20",
+    category: "Living Room",
+  },
+  // More Office
+  {
+    name: "Leather Desk Pad",
+    price: "$16",
+    rating: 4.5,
+    reviewCount: "12,400+",
+    description:
+      "Faux leather desk mat that protects your surface and makes your entire workspace look more polished. Waterproof and easy to wipe clean.",
+    imageUrl: "/images/products/leather_desk_pad.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=leather+desk+pad+large&tag=havenandhomec-20",
+    category: "Office",
+  },
+  {
+    name: "LED Desk Lamp with USB Port",
+    price: "$24",
+    rating: 4.5,
+    reviewCount: "9,800+",
+    description:
+      "Adjustable desk lamp with multiple brightness levels and a built-in USB charging port. Reduces eye strain and keeps your phone charged.",
+    imageUrl: "/images/products/led_desk_lamp_usb.jpg",
+    affiliateUrl: "https://www.amazon.com/s?k=led+desk+lamp+usb+port+dimmable&tag=havenandhomec-20",
+    category: "Office",
   },
 ];
 

@@ -2,6 +2,15 @@ import { getAllPosts } from '@/lib/mdx';
 
 const SITE_URL = 'https://www.havenandhome.live';
 
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 export async function GET() {
   const posts = getAllPosts();
 
@@ -13,6 +22,7 @@ export async function GET() {
       const imageUrl = featuredImage.startsWith('http')
         ? featuredImage
         : `${SITE_URL}${featuredImage}`;
+      const safeImageUrl = escapeXml(imageUrl);
 
       return `    <item>
       <title><![CDATA[${title}]]></title>
@@ -21,8 +31,8 @@ export async function GET() {
       <guid isPermaLink="true">${SITE_URL}/blog/${slug}</guid>
       <pubDate>${pubDate}</pubDate>
       <category><![CDATA[${category}]]></category>
-      <enclosure url="${imageUrl}" type="image/jpeg" length="0" />
-      <media:content url="${imageUrl}" medium="image" />
+      <enclosure url="${safeImageUrl}" type="image/jpeg" length="0" />
+      <media:content url="${safeImageUrl}" medium="image" />
       <media:description><![CDATA[${title} — ${excerpt}]]></media:description>
     </item>`;
     })
