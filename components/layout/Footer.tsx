@@ -104,7 +104,7 @@ export default function Footer() {
 
               {/* Email */}
               <a
-                href="mailto:hello@havenandhome.co"
+                href="mailto:hello@havenandhome.live"
                 className="inline-flex items-center gap-2 font-body text-sm text-medium-gray transition-colors hover:text-terracotta"
               >
                 <svg

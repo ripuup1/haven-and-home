@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato, Cormorant_Garamond } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ParallaxBackground from "@/components/ui/ParallaxBackground";
+
+// TODO: Replace with your GA4 Measurement ID (e.g., "G-XXXXXXXXXX")
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -63,6 +67,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Google Analytics */}
+      {GA_MEASUREMENT_ID && (
+        <head>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </head>
+      )}
       <body
         className={`${playfair.variable} ${lato.variable} ${cormorant.variable} antialiased`}
       >
