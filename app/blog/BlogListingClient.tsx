@@ -36,6 +36,7 @@ const CATEGORIES = [
   "Living Room",
   "Organization",
   "Budget Finds",
+  "Nail Ideas",
   "Amazon Picks",
 ];
 
@@ -72,8 +73,8 @@ export default function BlogListingClient({
               The Blog
             </h1>
             <p className="mt-4 font-body text-lg text-medium-gray max-w-2xl mx-auto">
-              Home decor tips, honest product reviews, room makeovers, and
-              organization ideas to help you love your space.
+              Home decor tips, honest product reviews, room makeovers,
+              organization ideas, and nail inspiration to help you love your space.
             </p>
           </ScrollReveal>
         </div>
