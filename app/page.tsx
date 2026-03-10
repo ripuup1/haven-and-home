@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import ShopCarousel from "@/components/ui/ShopCarousel";
 import { getAllPosts } from "@/lib/mdx";
 import { formatDate } from "@/lib/utils";
+import { WebsiteSchema } from "@/components/seo/JsonLd";
 
 export const metadata = {
   title: "Haven & Home — Spaces Worth Coming Home To",
@@ -58,6 +59,7 @@ export default function HomePage() {
 
   return (
     <>
+      <WebsiteSchema />
       {/* Hero Section */}
       <Hero />
 

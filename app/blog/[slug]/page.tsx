@@ -6,7 +6,8 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { getPostBySlug, getAllPosts } from "@/lib/mdx";
-import { formatDate, extractHeadings } from "@/lib/utils";
+import { formatDate, extractHeadings, extractFAQs } from "@/lib/utils";
+import { ArticleSchema, FAQSchema } from "@/components/seo/JsonLd";
 import mdxComponents from "@/components/mdx/MDXComponents";
 import TableOfContents from "@/components/blog/TableOfContents";
 import ShopThisPost from "@/components/product/ShopThisPost";
@@ -38,6 +39,7 @@ export async function generateMetadata({
       description: post.frontmatter.excerpt,
       type: "article",
       publishedTime: post.frontmatter.date,
+      modifiedTime: post.frontmatter.lastModified || post.frontmatter.date,
       images: [post.frontmatter.featuredImage],
     },
     other: {
@@ -53,6 +55,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound();
 
   const headings = extractHeadings(post.content);
+  const faqs = extractFAQs(post.content);
+  const postUrl = `https://www.havenandhome.live/blog/${slug}`;
   const allPosts = await getAllPosts();
   const relatedPosts = allPosts
     .filter(
@@ -88,8 +92,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     products.push({ name: match[1], price: match[2], affiliateUrl: match[3] });
   }
 
+  const lastUpdatedDisplay = post.frontmatter.lastModified
+    ? new Date(post.frontmatter.lastModified).toLocaleDateString("en-US", {
+        month: "long",
+        year: "numeric",
+      })
+    : null;
+
   return (
     <article>
+      <ArticleSchema frontmatter={post.frontmatter} url={postUrl} />
+      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
       {/* Hero Image */}
       <div className="group relative h-[40vh] min-h-[320px] w-full md:h-[50vh]">
         <Image
@@ -129,6 +142,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <span>{formatDate(post.frontmatter.date)}</span>
               <span className="text-clay">|</span>
               <span>{post.readTime.text}</span>
+              {lastUpdatedDisplay && (
+                <>
+                  <span className="text-clay">|</span>
+                  <span>Last updated: {lastUpdatedDisplay}</span>
+                </>
+              )}
             </div>
           </div>
 

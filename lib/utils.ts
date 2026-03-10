@@ -82,3 +82,36 @@ export function extractHeadings(content: string): Heading[] {
 
   return headings;
 }
+
+// ---------------------------------------------------------------------------
+// FAQ extraction
+// ---------------------------------------------------------------------------
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+/**
+ * Extract FAQ questions and answers from markdown content.
+ * Looks for H3 headings that end with "?" inside or after a "Frequently Asked Questions" H2.
+ */
+export function extractFAQs(content: string): FAQItem[] {
+  const faqs: FAQItem[] = [];
+  const faqSectionRegex = /## Frequently Asked Questions\s*\n([\s\S]*?)(?=\n## [^#]|$)/i;
+  const faqMatch = faqSectionRegex.exec(content);
+  if (!faqMatch) return faqs;
+
+  const faqContent = faqMatch[1];
+  const questionRegex = /### (.+\?)\s*\n([\s\S]*?)(?=\n### |\n## |$)/g;
+  let qMatch;
+  while ((qMatch = questionRegex.exec(faqContent)) !== null) {
+    const question = qMatch[1].trim();
+    const answer = qMatch[2].trim().replace(/\n+/g, ' ');
+    if (question && answer) {
+      faqs.push({ question, answer });
+    }
+  }
+
+  return faqs;
+}

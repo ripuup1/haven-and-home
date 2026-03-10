@@ -13,6 +13,7 @@ export interface PostFrontmatter {
   title: string;
   slug: string;
   date: string;
+  lastModified: string;
   category: string;
   excerpt: string;
   featuredImage: string;
@@ -71,6 +72,7 @@ export function getPostBySlug(slug: string): Post | null {
       title: data.title ?? '',
       slug: data.slug ?? slug,
       date: data.date ?? '',
+      lastModified: data.lastModified ?? '',
       category: data.category ?? '',
       excerpt: data.excerpt ?? '',
       featuredImage: data.featuredImage ?? '',
