@@ -368,6 +368,50 @@ const PRODUCTS: Product[] = [
     affiliateUrl: "https://www.amazon.com/s?k=compact+dish+drying+rack+drainboard&tag=havenandhomec-20",
     category: "Kitchen",
   },
+  {
+    name: "Glass Canisters with Bamboo Lids (Set of 5)",
+    price: "$28",
+    rating: 4.6,
+    reviewCount: "11,400+",
+    description:
+      "Borosilicate glass canisters with airtight bamboo lids. Graduated sizes for flour, sugar, coffee, pasta, and snacks. The countertop upgrade everyone notices.",
+    imageUrl: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=glass+canisters+bamboo+lids+set+of+5+airtight&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
+  {
+    name: "Acacia Wood Cutting Board (18x14)",
+    price: "$28",
+    rating: 4.6,
+    reviewCount: "9,800+",
+    description:
+      "Large acacia wood board with dramatic grain pattern and juice groove. Beautiful enough to leave propped against the backsplash as kitchen decor.",
+    imageUrl: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=acacia+wood+cutting+board+large+juice+groove&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
+  {
+    name: "Expandable Bamboo Utensil Tray",
+    price: "$18",
+    rating: 4.4,
+    reviewCount: "8,800+",
+    description:
+      "Adjusts from 13 to 22 inches wide with 7 deep compartments. Finally tames the tangled utensil drawer. Bamboo looks clean and lasts forever.",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=expandable+bamboo+utensil+tray+kitchen+drawer+organizer&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
+  {
+    name: "Wall-Mounted Spice Rack (3 Tier)",
+    price: "$22",
+    rating: 4.5,
+    reviewCount: "8,400+",
+    description:
+      "Matte black three-tier spice rack that mounts on the wall or inside a cabinet door. Holds 15 jars and keeps every label visible at a glance.",
+    imageUrl: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=wall+mounted+spice+rack+3+tier+matte+black&tag=havenandhomec-20",
+    category: "Kitchen",
+  },
   // More Bathroom
   {
     name: "Eucalyptus Shower Bundle",
@@ -389,6 +433,39 @@ const PRODUCTS: Product[] = [
       "Expandable bamboo tray that sits across your bathtub. Holds a book, glass of wine, phone, and candle. Turns a regular bath into a ritual.",
     imageUrl: "/images/products/bamboo_bath_caddy_tray.jpg",
     affiliateUrl: "https://www.amazon.com/s?k=bamboo+bath+caddy+tray+expandable&tag=havenandhomec-20",
+    category: "Bathroom",
+  },
+  {
+    name: "Marble Vanity Tray (12x8)",
+    price: "$18",
+    rating: 4.5,
+    reviewCount: "6,400+",
+    description:
+      "Natural marble tray that groups soap, lotion, and candles into one polished display. Instantly makes scattered products look curated on any vanity.",
+    imageUrl: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=marble+vanity+tray+bathroom+organizer&tag=havenandhomec-20",
+    category: "Bathroom",
+  },
+  {
+    name: "Matte Black Glass Soap Dispenser",
+    price: "$16",
+    rating: 4.5,
+    reviewCount: "9,400+",
+    description:
+      "Refillable glass soap dispenser that replaces cluttered plastic pump bottles. Smooth pump, wide mouth for easy refilling. The single best bathroom counter swap.",
+    imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=matte+black+glass+soap+dispenser+bathroom&tag=havenandhomec-20",
+    category: "Bathroom",
+  },
+  {
+    name: "Tension Pole Shower Caddy (4 Shelves)",
+    price: "$35",
+    rating: 4.4,
+    reviewCount: "11,200+",
+    description:
+      "Spring-loaded tension pole with 4 adjustable shelves. Wedges between tub and ceiling. Never falls because it's literally pressure-locked in place.",
+    imageUrl: "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=tension+pole+shower+caddy+4+shelf+rust+proof&tag=havenandhomec-20",
     category: "Bathroom",
   },
   // More Bedroom
@@ -414,6 +491,39 @@ const PRODUCTS: Product[] = [
     affiliateUrl: "https://www.amazon.com/s?k=cotton+sleep+mask+comfortable&tag=havenandhomec-20",
     category: "Bedroom",
   },
+  {
+    name: "Waffle Weave Comforter Set (Queen)",
+    price: "$68",
+    rating: 4.6,
+    reviewCount: "9,800+",
+    description:
+      "Textured waffle weave comforter with two shams. All-season weight that works year-round. Makes the bed look layered and styled even when you just throw it on.",
+    imageUrl: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=waffle+weave+comforter+set+queen+cream+cotton&tag=havenandhomec-20",
+    category: "Bedroom",
+  },
+  {
+    name: "Velvet Hangers (50 Pack, Slim)",
+    price: "$22",
+    rating: 4.7,
+    reviewCount: "42,000+",
+    description:
+      "Ultra-thin velvet hangers that save 30% more rod space than plastic. Non-slip coating keeps everything in place. Matching hangers instantly make any closet look organized.",
+    imageUrl: "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=velvet+hangers+50+pack+non+slip+grey&tag=havenandhomec-20",
+    category: "Bedroom",
+  },
+  {
+    name: "Lightweight Linen Throw Blanket",
+    price: "$28",
+    rating: 4.5,
+    reviewCount: "7,200+",
+    description:
+      "Pre-washed linen throw in natural oat. Warm enough for cool nights, light enough for spring. Drapes beautifully across the foot of any bed.",
+    imageUrl: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=lightweight+linen+throw+blanket+natural+oat&tag=havenandhomec-20",
+    category: "Bedroom",
+  },
   // More Living Room
   {
     name: "Decorative Book Stack Set",
@@ -435,6 +545,39 @@ const PRODUCTS: Product[] = [
       "Ottoman that opens up for blanket and pillow storage. Folds flat when not in use. Extra seating, hidden storage, and a footrest in one piece.",
     imageUrl: "/images/products/storage_ottoman_with_lid_foldable.jpg",
     affiliateUrl: "https://www.amazon.com/s?k=storage+ottoman+foldable+with+lid&tag=havenandhomec-20",
+    category: "Living Room",
+  },
+  {
+    name: "Lift Top Coffee Table with Storage",
+    price: "$130",
+    rating: 4.4,
+    reviewCount: "11,400+",
+    description:
+      "Coffee table with a hidden storage compartment and lift-top that doubles as a desk. Two pieces of furniture in one. Wood grain finish looks way more expensive than the price.",
+    imageUrl: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=lift+top+coffee+table+with+storage+wood&tag=havenandhomec-20",
+    category: "Living Room",
+  },
+  {
+    name: "Linen Pillow Covers (Set of 2, 18x18)",
+    price: "$16",
+    rating: 4.5,
+    reviewCount: "7,800+",
+    description:
+      "Natural linen pillow covers that instantly refresh any sofa for spring. Hidden zipper, pre-washed for softness. The fastest seasonal swap you can make.",
+    imageUrl: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=linen+pillow+covers+18x18+natural+beige+set+of+2&tag=havenandhomec-20",
+    category: "Living Room",
+  },
+  {
+    name: "Faux Eucalyptus Stems (Set of 6)",
+    price: "$24",
+    rating: 4.4,
+    reviewCount: "9,200+",
+    description:
+      "Realistic artificial eucalyptus with natural color variations. Arrange in any vase for instant spring greenery. No water, no maintenance, no dead leaves.",
+    imageUrl: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=faux+eucalyptus+stems+realistic+artificial+greenery&tag=havenandhomec-20",
     category: "Living Room",
   },
   // More Office
@@ -459,6 +602,40 @@ const PRODUCTS: Product[] = [
     imageUrl: "/images/products/led_desk_lamp_usb.jpg",
     affiliateUrl: "https://www.amazon.com/s?k=led+desk+lamp+usb+port+dimmable&tag=havenandhomec-20",
     category: "Office",
+  },
+  // More Organization
+  {
+    name: "Brother P-Touch Label Maker",
+    price: "$25",
+    rating: 4.6,
+    reviewCount: "12,400+",
+    description:
+      "QWERTY keyboard label maker with laminated waterproof tape. The one every professional organizer uses. Print labels for bins, jars, and shelves in seconds.",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=Brother+P-Touch+PTD220+label+maker&tag=havenandhomec-20",
+    category: "Organization",
+  },
+  {
+    name: "Wall-Mounted Coat Rack (5 Hooks)",
+    price: "$18",
+    rating: 4.6,
+    reviewCount: "11,200+",
+    description:
+      "Industrial matte black coat rack with 5 heavy-duty hooks. The single most impactful thing you can add to any entryway. Holds coats, bags, and umbrellas.",
+    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=wall+mounted+coat+rack+5+hooks+matte+black&tag=havenandhomec-20",
+    category: "Organization",
+  },
+  {
+    name: "Fabric Storage Bins with Labels (Set of 6)",
+    price: "$24",
+    rating: 4.4,
+    reviewCount: "8,600+",
+    description:
+      "Foldable grey linen bins with clear label windows. Fits cube shelves and closet shelves. The clear window means you always know what's inside without pulling it down.",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80",
+    affiliateUrl: "https://www.amazon.com/s?k=fabric+storage+bins+with+label+window+set+of+6+grey&tag=havenandhomec-20",
+    category: "Organization",
   },
 ];
 
