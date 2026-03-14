@@ -1,3 +1,8 @@
+// AFFILIATE LINK FORMAT (updated 2026-03-14):
+// Always use direct ASIN links: https://www.amazon.com/dp/[ASIN]?tag=havenandhomec-20
+// Do NOT use search URLs: https://www.amazon.com/s?k=...
+// If ASIN is unknown, use search URL as fallback but flag for manual resolution
+
 "use client";
 
 import { useState } from "react";
