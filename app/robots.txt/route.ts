@@ -1,4 +1,4 @@
-const SITE_URL = 'https://havenandhome.co';
+const SITE_URL = 'https://www.havenandhome.live';
 
 export async function GET() {
   const body = `User-agent: *
