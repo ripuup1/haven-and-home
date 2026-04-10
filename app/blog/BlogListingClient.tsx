@@ -2,10 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import BlogGrid from "@/components/blog/BlogGrid";
 import CategoryFilter from "@/components/blog/CategoryFilter";
 import Sidebar from "@/components/layout/Sidebar";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+const CATEGORY_CARDS: { label: string; slug: string; tagline: string }[] = [
+  { label: "Kitchen", slug: "kitchen", tagline: "Organizers, gadgets & counter upgrades" },
+  { label: "Bathroom", slug: "bathroom", tagline: "Spa swaps & small-space storage" },
+  { label: "Bedroom", slug: "bedroom", tagline: "Hotel bedding & cozy essentials" },
+  { label: "Living Room", slug: "living-room", tagline: "Pillows, rugs & accent styling" },
+  { label: "Organization", slug: "organization", tagline: "Drawer, closet & pantry systems" },
+  { label: "Seasonal", slug: "seasonal", tagline: "Holiday decor & trending finds" },
+];
 
 interface BlogPost {
   title: string;
@@ -77,6 +87,28 @@ export default function BlogListingClient({
               organization ideas, and nail inspiration to help you love your space.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Category Cards — links to dedicated SEO landing pages */}
+      <section className="px-4 pt-6 sm:px-6 sm:pt-10 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
+            {CATEGORY_CARDS.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/blog/category/${cat.slug}`}
+                className="group rounded-xl border border-clay/20 bg-soft-white/80 p-4 text-left shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-terracotta/60 hover:shadow-md"
+              >
+                <p className="font-heading text-base font-bold text-charcoal group-hover:text-terracotta">
+                  {cat.label}
+                </p>
+                <p className="mt-1 font-body text-xs text-medium-gray">
+                  {cat.tagline}
+                </p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

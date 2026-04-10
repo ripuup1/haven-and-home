@@ -11,6 +11,12 @@ export async function GET() {
     { url: '/blog', lastmod: today, changefreq: 'daily', priority: '0.9' },
     { url: '/about', lastmod: today, changefreq: 'monthly', priority: '0.7' },
     { url: '/favorites', lastmod: today, changefreq: 'weekly', priority: '0.8' },
+    { url: '/blog/category/kitchen', lastmod: today, changefreq: 'daily', priority: '0.85' },
+    { url: '/blog/category/bathroom', lastmod: today, changefreq: 'daily', priority: '0.85' },
+    { url: '/blog/category/bedroom', lastmod: today, changefreq: 'daily', priority: '0.85' },
+    { url: '/blog/category/living-room', lastmod: today, changefreq: 'daily', priority: '0.85' },
+    { url: '/blog/category/organization', lastmod: today, changefreq: 'daily', priority: '0.85' },
+    { url: '/blog/category/seasonal', lastmod: today, changefreq: 'daily', priority: '0.85' },
   ];
 
   const staticEntries = staticPages

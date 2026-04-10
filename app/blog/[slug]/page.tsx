@@ -92,6 +92,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     products.push({ name: match[1], price: match[2], affiliateUrl: match[3] });
   }
 
+  // Map category label → category page slug. Must match app/blog/category/[category]/page.tsx
+  const categorySlugMap: Record<string, string> = {
+    kitchen: "kitchen",
+    bathroom: "bathroom",
+    bedroom: "bedroom",
+    "living room": "living-room",
+    organization: "organization",
+    "organization/storage": "organization",
+    seasonal: "seasonal",
+    "seasonal/trending": "seasonal",
+    outdoor: "seasonal",
+  };
+  const categoryKey = post.frontmatter.category.trim().toLowerCase();
+  const categorySlug = categorySlugMap[categoryKey];
+
   const lastUpdatedDisplay = post.frontmatter.lastModified
     ? new Date(post.frontmatter.lastModified).toLocaleDateString("en-US", {
         month: "long",
@@ -121,9 +136,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto w-full max-w-4xl px-6 pb-10">
-            <span className="mb-3 inline-block rounded-full bg-olive px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-white">
-              {post.frontmatter.category}
-            </span>
+            {categorySlug ? (
+              <Link
+                href={`/blog/category/${categorySlug}`}
+                className="mb-3 inline-block rounded-full bg-olive px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-terracotta"
+              >
+                {post.frontmatter.category}
+              </Link>
+            ) : (
+              <span className="mb-3 inline-block rounded-full bg-olive px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-white">
+                {post.frontmatter.category}
+              </span>
+            )}
             <h1 className="font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
               {post.frontmatter.title}
             </h1>
@@ -211,6 +235,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     />
                   ))}
                 </div>
+                {categorySlug && (
+                  <div className="mt-10 text-center">
+                    <Link
+                      href={`/blog/category/${categorySlug}`}
+                      className="inline-flex items-center gap-2 rounded-full border border-terracotta px-6 py-3 font-body text-sm font-semibold uppercase tracking-wider text-terracotta transition-colors hover:bg-terracotta hover:text-white"
+                    >
+                      Browse all {post.frontmatter.category} ideas
+                      <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                )}
               </section>
             )}
           </div>
